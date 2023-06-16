@@ -54,7 +54,7 @@ cotizar.addEventListener('click', () => {
   let _p = parseInt(pArr[0]);
   let _ml = parseInt(pArr[1])
   let _ga = parseInt((Math.pow(6,3)) - 16);
-  let _g = 0.85;
+  let _g = 0.75;
   let pb = parseInt(Math.round((_p + _ga)/_g))
   let p = Math.round(pb/_ml)
   $('#modal-pQuotation').text('Costo por mililitro: $' + p)
