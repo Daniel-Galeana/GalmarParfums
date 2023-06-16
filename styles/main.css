@@ -1,10 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
 
+
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+}
+
 .sct1{
     background-image: url(../assets/decantsNEW.svg);
     background-attachment: fixed;
     background-position: center center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     transform-style: preserve-3d;
     position: relative;
