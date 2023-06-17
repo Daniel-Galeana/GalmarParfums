@@ -68,12 +68,27 @@
     background-size: cover;
 }
 
+.BusquedaPerfumes{
+  width: 415px !important;
+  margin-top: 1%;
+}
+@media only screen and (max-width: 1120px){
+  .BusquedaPerfumes{
+    margin-top: 2%;
+    }
+  }
+  @media only screen and (max-width: 660px){
+    .BusquedaPerfumes{
+      margin-top: 4%;
+      }
+    }
+
 .gototop {
     text-decoration: none !important;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 9999;
+    z-index: 1;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -284,7 +299,7 @@ footer p{
   
   /* Estilos para el contenido del modal */
   #modal-image {
-    width: 125px;
+    width: 350px;
     height: auto;
     margin-bottom: 20px;
   }
@@ -293,6 +308,8 @@ footer p{
     font-size: 1.2em;
     line-height: 1.5;
     text-align: justify;
+    margin-top: 2%;
+    max-width: 601px;
   }
 
   .pinprocess {
@@ -326,4 +343,55 @@ footer p{
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5%;
+  }
+  @media only screen and (max-width: 983px){
+    .styleModalDetail{
+      flex-direction: column;
+      }
+  }
+
+  #closebt-container {
+    position: relative;
+    width:100%;
+    text-align:center;
+    margin-top:40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .closebt {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor:pointer;
+  }
+  
+  .closebt:hover {
+    transform:rotate(90deg);
+  }
+
+  #grafica-container {
+    width: 600px; /* Modifica el ancho de la gráfica */
+    height: 400px; /* Modifica la altura de la gráfica */
+  }
+
+  canvas {
+    position: relative;
+  }
+
+  .spanSeasons{
+    padding: 1px 39px 1px 39px;
+  }
+  @media only screen and (max-width: 983px){
+    .spanSeasons{
+      padding: 1px 10px 1px 10px;
+      }
   }
