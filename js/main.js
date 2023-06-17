@@ -13,17 +13,24 @@ $("#demo02").animatedModal({
   color:'#fff',
   // Callbacks
   beforeOpen: function() {
-      console.log("The animation was called");
+      //console.log("The animation was called");
   },           
   afterOpen: function() {
-      console.log("The animation is completed");
+      //console.log("The animation is completed");
   }, 
   beforeClose: function() {
-      console.log("The animation was called");
+      //console.log("The animation was called");
   }, 
   afterClose: function() {
-      console.log("The animation is completed");
+      //console.log("The animation is completed");
   }
+});
+
+$( document ).ready(function() {
+        window.history.pushState('forward', null, './#forward');
+        $(window).on('popstate', function() {
+          alert('Back');
+        });
 });
 
 // Función para mostrar el modal con el perfume seleccionado
