@@ -13,7 +13,7 @@ $("#demo02").animatedModal({
   color: '#fff',
   // Callbacks
   beforeOpen: function () {
-    //console.log("The animation was called");
+    $('#modal-02').scrollTop(0)
   },
   afterOpen: function () {
     //console.log("The animation is completed");
