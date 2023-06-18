@@ -30,7 +30,9 @@ window.history.pushState('forward', null, './#forward');
 $(window).on('popstate', function () {
   $('.closebt').click()
   window.history.pushState('forward', null, './#forward');
-  window.scroll('', localStorage['yAxisLocation'])
+  setTimeout(() => {
+    window.scroll('', localStorage['yAxisLocation'])
+  }, 100);
 });
 
 
@@ -53,10 +55,11 @@ function mostrarModal(src, descripcion, nombre, p, seasson) {
 
 // Event listeners
 perfumesContainer.addEventListener('click', e => {
-  var bodyRect = document.body.getBoundingClientRect()
-  let position = e.target.getBoundingClientRect();
-  let offset   = position.top - bodyRect.top;
-  localStorage.setItem('yAxisLocation', offset)
+  // var bodyRect = document.body.getBoundingClientRect()
+  // let position = e.target.getBoundingClientRect();
+  // let offset   = position.top - bodyRect.top;
+  
+  localStorage.setItem('yAxisLocation', window.scrollY)
   const perfume = e.target.closest('.perfume');
   if (perfume) {
     const nombre = perfume.querySelector('.perfume-name').innerHTML;
