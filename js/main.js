@@ -8,30 +8,30 @@ const modalDescription = document.getElementById('modal-description');
 const modalClose = document.getElementById('modal-close');
 
 $("#demo02").animatedModal({
-  animatedIn:'lightSpeedIn',
-  animatedOut:'bounceOutDown',
-  color:'#fff',
+  animatedIn: 'lightSpeedIn',
+  animatedOut: 'bounceOutDown',
+  color: '#fff',
   // Callbacks
-  beforeOpen: function() {
-      //console.log("The animation was called");
-  },           
-  afterOpen: function() {
-      //console.log("The animation is completed");
-  }, 
-  beforeClose: function() {
-      //console.log("The animation was called");
-  }, 
-  afterClose: function() {
-      //console.log("The animation is completed");
+  beforeOpen: function () {
+    //console.log("The animation was called");
+  },
+  afterOpen: function () {
+    //console.log("The animation is completed");
+  },
+  beforeClose: function () {
+    //console.log("The animation was called");
+  },
+  afterClose: function () {
+    //console.log("The animation is completed");
   }
 });
 
-$( document ).ready(function() {
-        window.history.pushState('forward', null, './#forward');
-        $(window).on('popstate', function() {
-          alert('Back');
-        });
+window.history.pushState('forward', null, './#forward');
+$(window).on('popstate', function () {
+  $('.closebt').click()
+  window.history.pushState('forward', null, './#forward');
 });
+
 
 // Función para mostrar el modal con el perfume seleccionado
 function mostrarModal(src, descripcion, nombre, p, seasson) {
@@ -65,7 +65,7 @@ perfumesContainer.addEventListener('click', e => {
 
 const searchInput = document.getElementById('search-input');
 
-searchInput.addEventListener('input', function() {
+searchInput.addEventListener('input', function () {
   const searchQuery = searchInput.value.toLowerCase();
 
   for (let i = 0; i < perfumesContainer.children.length; i++) {
@@ -76,7 +76,7 @@ searchInput.addEventListener('input', function() {
       perfume.style.display = 'block';
     } else {
       perfume.style.display = 'none';
-    } 
+    }
   }
 });
 
@@ -84,10 +84,10 @@ const cotizar = (c) => {
   let pArr = c.split('|');
   let _p = parseInt(pArr[0]);
   let _ml = parseInt(pArr[1])
-  let _ga = parseInt((Math.pow(6,3)) - 16);
+  let _ga = parseInt((Math.pow(6, 3)) - 16);
   let _g = 0.75;
-  let pb = parseInt(Math.round((_p + _ga)/_g))
-  let p = Math.round(pb/_ml)
+  let pb = parseInt(Math.round((_p + _ga) / _g))
+  let p = Math.round(pb / _ml)
   return p
 }
 
@@ -100,39 +100,39 @@ const PintarGrafica = (json) => {
   let perfume = JSON.parse(json);
 
   // Obtener las temporadas y los porcentajes
-var temporadas = Object.keys(perfume);
-var porcentajes = Object.values(perfume);
+  var temporadas = Object.keys(perfume);
+  var porcentajes = Object.values(perfume);
 
-// Definir colores para cada temporada
-var colores = ['#00DFA2', '#DB005B', '#F79327', '#00C4FF'];
+  // Definir colores para cada temporada
+  var colores = ['#00DFA2', '#DB005B', '#F79327', '#00C4FF'];
 
-// Crear la gráfica de pastel
-var ctx = document.getElementById('grafica').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'pie',
-  data: {
-    labels: temporadas,
-    datasets: [{
-      label: 'Porcentaje de usabilidad ',
-      data: porcentajes,
-      backgroundColor: colores
-    }]
-  },
-  options: {
-    responsive: false, // Deshabilitar la respuesta automática al tamaño de la pantalla
-        maintainAspectRatio: false, // No mantener la relación de aspecto
-    plugins: {
-      legend: {
-        display: false, // Ocultar las leyendas
-        onClick: function() {}, // Evitar acción al hacer clic en la leyenda
-        onHover: function() {} // Evitar cambio de cursor al pasar sobre la leyenda
-      },
-      tooltip: {
-        filter: function() { // Evitar mostrar tooltips al pasar sobre los elementos de la gráfica
-          return true;
+  // Crear la gráfica de pastel
+  var ctx = document.getElementById('grafica').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: temporadas,
+      datasets: [{
+        label: 'Porcentaje de usabilidad ',
+        data: porcentajes,
+        backgroundColor: colores
+      }]
+    },
+    options: {
+      responsive: false, // Deshabilitar la respuesta automática al tamaño de la pantalla
+      maintainAspectRatio: false, // No mantener la relación de aspecto
+      plugins: {
+        legend: {
+          display: false, // Ocultar las leyendas
+          onClick: function () { }, // Evitar acción al hacer clic en la leyenda
+          onHover: function () { } // Evitar cambio de cursor al pasar sobre la leyenda
+        },
+        tooltip: {
+          filter: function () { // Evitar mostrar tooltips al pasar sobre los elementos de la gráfica
+            return true;
+          }
         }
       }
     }
-  }
-});
+  });
 }
