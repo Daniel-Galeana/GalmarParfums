@@ -1,1 +1,154 @@
-function mostrarModal(e,t,o,n,a){let r='<canvas id="grafica" width="300" height="400"></canvas>';$("#grafica").remove(),$("#canvasContainer").append(r);let i=parseJSON(a),l=cotizar(n);$("#modal-pQuotation").text("$  "+l),TituloPerfume.innerHTML=o,modalImage.src=e,modalDescription.innerHTML=t,$("#demo02").click(),setTimeout(()=>{PintarGrafica(i)},200)}const perfumesContainer=document.getElementById("perfumes-container"),modal=document.getElementById("modal"),modalImage=document.getElementById("modal-image"),modalImageQuotation=document.getElementById("modal-imageQuotation"),TituloPerfume=document.getElementById("TituloPerfume"),TituloPerfumeQuotation=document.getElementById("TituloPerfumeQuotation"),modalDescription=document.getElementById("modal-description"),modalClose=document.getElementById("modal-close");$("#demo02").animatedModal({animatedIn:"zoomIn",animatedOut:"bounceOut",color:"#fff",beforeOpen:function(){setTimeout(()=>{$("#modal-02").scrollTop(0)},100)},afterOpen:function(){},beforeClose:function(){},afterClose:function(){}}),window.history.pushState("forward",null,"./"),$(window).on("popstate",function(){$(".closebt").click(),window.history.pushState("forward",null,"./"),setTimeout(()=>{window.scroll("",localStorage.yAxisLocation)},100)}),perfumesContainer.addEventListener("click",e=>{localStorage.setItem("yAxisLocation",window.scrollY);const t=e.target.closest(".perfume");if(t){const e=t.querySelector(".perfume-name").innerHTML,o=t.querySelector(".perfume-image"),n=t.querySelector(".perfume-p").attributes.ptv.value,a=t.querySelector(".perfume-p").attributes.seassons.value,r=t.querySelector(".perfume-description").innerHTML;mostrarModal(o.src,r,e,n,a)}});const searchInput=document.getElementById("search-input");searchInput.addEventListener("input",function(){const e=searchInput.value.toLowerCase();for(let t=0;t<perfumesContainer.children.length;t++){const o=perfumesContainer.children[t],n=o.querySelector(".perfume-name").textContent.toLowerCase();n.includes(e)?o.style.display="block":o.style.display="none"}});const cotizar=e=>{let t=e.split("|"),o=parseInt(t[0]),n=parseInt(t[1]),a=parseInt(Math.pow(6,3)-16),r=.75,i=parseInt(Math.round((o+a)/r)),l=Math.round(i/n)+10;return l},parseJSON=e=>{let t=e.replaceAll("'",'"');return t},PintarGrafica=e=>{let t=JSON.parse(e);var o=Object.keys(t),n=Object.values(t),a=["#00DFA2","#DB005B","#F79327","#00C4FF"],r=document.getElementById("grafica").getContext("2d");new Chart(r,{type:"pie",data:{labels:o,datasets:[{label:"Porcentaje de usabilidad ",data:n,backgroundColor:a}]},options:{responsive:!1,maintainAspectRatio:!1,plugins:{legend:{display:!1,onClick:function(){},onHover:function(){}},tooltip:{filter:function(){return!0}}}}})};
+const perfumesContainer = document.getElementById('perfumes-container');
+const modal = document.getElementById('modal');
+const modalImage = document.getElementById('modal-image');
+const modalImageQuotation = document.getElementById('modal-imageQuotation');
+const TituloPerfume = document.getElementById('TituloPerfume');
+const TituloPerfumeQuotation = document.getElementById('TituloPerfumeQuotation');
+const modalDescription = document.getElementById('modal-description');
+const modalClose = document.getElementById('modal-close');
+const subir = document.getElementById('subir')
+
+$("#demo02").animatedModal({
+  animatedIn: 'zoomIn',
+  animatedOut: 'bounceOut',
+  color: '#fff',
+  // Callbacks
+  beforeOpen: function () {
+    setTimeout(() => {
+      $('#modal-02').scrollTop(0);
+    }, 100);
+  },
+  afterOpen: function () {  
+    localStorage.setItem('mdlIsopen',1)
+  },
+  beforeClose: function () {
+    //console.log("The animation was called");
+  },
+  afterClose: function () {
+    localStorage.setItem('mdlIsopen',0)
+  }
+});
+
+window.history.pushState('forward', null, '/');
+$(window).on('popstate', function () {
+  if(localStorage['mdlIsopen'] == 1){
+    $('.closebt').click();
+    window.history.pushState('forward', null, '/');
+    setTimeout(() => {
+      window.scroll('', localStorage['yAxisLocation']);
+    }, 100);
+  }else{
+    $(window).scrollTop(0);
+  }
+});
+
+subir.addEventListener('click', () => {
+  $(window).scrollTop(0);
+})
+
+
+// Función para mostrar el modal con el perfume seleccionado
+function mostrarModal(src, descripcion, nombre, p, seasson) {
+  let htmlElement = '<canvas id="grafica" width="300" height="400"></canvas>';
+  $('#grafica').remove();
+  $('#canvasContainer').append(htmlElement);
+  let jsonSeassons = parseJSON(seasson);
+  let c = cotizar(p);
+  $('#modal-pQuotation').text('$  ' + c);
+  TituloPerfume.innerHTML = nombre;
+  modalImage.src = src;
+  modalDescription.innerHTML = descripcion;
+  $('#demo02').click();
+  setTimeout(() => {
+    PintarGrafica(jsonSeassons);
+  }, 200);
+};
+
+// Event listeners
+perfumesContainer.addEventListener('click', e => {  
+  localStorage.setItem('yAxisLocation', window.scrollY);
+  const perfume = e.target.closest('.perfume');
+  if (perfume) {
+    const nombre = perfume.querySelector('.perfume-name').innerHTML;
+    const image = perfume.querySelector('.perfume-image');
+    const p = perfume.querySelector('.perfume-p').attributes['ptv'].value;
+    const seasson = perfume.querySelector('.perfume-p').attributes['seassons'].value;
+    const description = perfume.querySelector('.perfume-description').innerHTML;
+    mostrarModal(image.src, description, nombre, p, seasson);
+  };
+});
+
+const searchInput = document.getElementById('search-input');
+
+searchInput.addEventListener('input', function () {
+  const searchQuery = searchInput.value.toLowerCase();
+
+  for (let i = 0; i < perfumesContainer.children.length; i++) {
+    const perfume = perfumesContainer.children[i];
+    const perfumeName = perfume.querySelector('.perfume-name').textContent.toLowerCase();
+
+    if (perfumeName.includes(searchQuery)) {
+      perfume.style.display = 'block';
+    } else {
+      perfume.style.display = 'none';
+    };
+  };
+});
+
+const cotizar = (c) => {
+  let pArr = c.split('|');
+  let _p = parseInt(pArr[0]);
+  let _ml = parseInt(pArr[1]);
+  let _ga = parseInt(((Math.pow(6, 3)) - 16));
+  let _g = 0.75;
+  let pb = parseInt(Math.round((_p + _ga) / _g));
+  let p = Math.round(pb / _ml) + 10;
+  return p;
+};
+
+const parseJSON = (json) => {
+  let JSONformatter = json.replaceAll("'", '"');
+  return JSONformatter;
+};
+
+
+const PintarGrafica = (json) => {
+  let perfume = JSON.parse(json);
+
+  // Obtener las temporadas y los porcentajes
+  var temporadas = Object.keys(perfume);
+  var porcentajes = Object.values(perfume);
+
+  // Definir colores para cada temporada
+  var colores = ['#00DFA2', '#DB005B', '#F79327', '#00C4FF'];
+
+  // Crear la gráfica de pastel
+  var ctx = document.getElementById('grafica').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: temporadas,
+      datasets: [{
+        label: 'Porcentaje de usabilidad ',
+        data: porcentajes,
+        backgroundColor: colores
+      }]
+    },
+    options: {
+      responsive: false, // Deshabilitar la respuesta automática al tamaño de la pantalla
+      maintainAspectRatio: false, // No mantener la relación de aspecto
+      plugins: {
+        legend: {
+          display: false, // Ocultar las leyendas
+          onClick: function () { }, // Evitar acción al hacer clic en la leyenda
+          onHover: function () { } // Evitar cambio de cursor al pasar sobre la leyenda
+        },
+        tooltip: {
+          filter: function () { // Evitar mostrar tooltips al pasar sobre los elementos de la gráfica
+            return true;
+          }
+        }
+      }
+    }
+  });
+};

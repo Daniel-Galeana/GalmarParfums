@@ -1,1 +1,40 @@
-const SAlertToast=(e,t,o,n)=>{const i=Swal.mixin({toast:!0,position:e,showConfirmButton:!1,timer:t,timerProgressBar:!0,didOpen:e=>{e.addEventListener("mouseenter",Swal.stopTimer),e.addEventListener("mouseleave",Swal.resumeTimer)}});i.fire({icon:o,title:n})},SAlertMessage=(e,t,o,n,i)=>{Swal.fire({position:e,icon:t,title:o,timer:n,showConfirmButton:i})},ReadJson=async e=>{let t={};return await fetch(e).then(e=>e.json()).catch(e=>{console.log("File not found")}).then(e=>{t=e}),t};
+const SAlertToast = (position, timmer, icon, title) => {
+    const Success = Swal.mixin({
+        toast: true,
+        position: position,
+        showConfirmButton: false,
+        timer: timmer,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+    Success.fire({
+        icon: icon,
+        title: title
+    });
+};
+
+const SAlertMessage = (position, icon, title, timer, confirmButton) => {
+    Swal.fire({
+        position: position,
+        icon: icon,
+        title: title,
+        timer: timer,
+        showConfirmButton: confirmButton
+    });
+};
+
+const ReadJson = async (JsonUrl) => {
+    let result = {};
+    await fetch(JsonUrl)
+        .then(res => res.json())
+        .catch(error => {
+            console.log('File not found')
+        })
+        .then(response => {
+            result = response;
+        });
+    return result;
+};
