@@ -29,18 +29,20 @@ $("#demo02").animatedModal({
   }
 });
 
-window.history.pushState('forward', null, '/');
-$(window).on('popstate', function () {
-  if(localStorage['mdlIsopen'] == 1){
-    $('.closebt').click();
-    window.history.pushState('forward', null, '/');
-    setTimeout(() => {
-      window.scroll('', localStorage['yAxisLocation']);
-    }, 100);
-  }else{
-    $(window).scrollTop(0);
-  }
-});
+$(document).ready(function () {
+  $(window).on('popstate', function () {
+    if(localStorage['mdlIsopen'] == 1){
+      $('.closebt').click();      
+      setTimeout(() => {
+        window.scroll('', localStorage['yAxisLocation']);
+      }, 100);
+    }else{
+      $(window).scrollTop(0);
+    }
+  });
+})
+
+
 
 subir.addEventListener('click', () => {
   $(window).scrollTop(0);
@@ -59,6 +61,7 @@ function mostrarModal(src, descripcion, nombre, p, seasson) {
   modalImage.src = src;
   modalDescription.innerHTML = descripcion;
   $('#demo02').click();
+  window.history.pushState('forward', null, '/');
   setTimeout(() => {
     PintarGrafica(jsonSeassons);
   }, 200);
