@@ -395,3 +395,23 @@ footer p{
       padding: 1px 10px 1px 10px;
       }
   }
+
+  .logeo{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgb(100,100,100, 0.6);
+    flex-direction: column;
+  }
+
+  .tab{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
