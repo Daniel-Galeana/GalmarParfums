@@ -85,7 +85,6 @@ const searchInput = document.getElementById('search-input');
 
 searchInput.addEventListener('input', function () {
   const searchQuery = searchInput.value.toLowerCase();
-
   for (let i = 0; i < perfumesContainer.children.length; i++) {
     const perfume = perfumesContainer.children[i];
     const perfumeName = perfume.querySelector('.perfume-name').textContent.toLowerCase();
@@ -113,7 +112,6 @@ const parseJSON = (json) => {
   let JSONformatter = json.replaceAll("'", '"');
   return JSONformatter;
 };
-
 
 const PintarGrafica = (json) => {
   let perfume = JSON.parse(json);
