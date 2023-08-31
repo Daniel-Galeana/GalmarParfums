@@ -1,0 +1,298 @@
+{
+	"menuParfums": [
+		{
+		"url": "assets/Parfums/375x500.61856.jpg",
+		"name": "Jean Paul Gaultier - Le Male Le Parfum",
+		"pam": "2700|125",
+		"seassons": "{'Primavera':50,'Verano':10,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: cardamomo, lavanda, iris, vainilla, especiado, amaderado."
+		},
+		{
+		"url": "assets/Parfums/Shura.jpg",
+		"name": "Rasasi - Shuhrah Pour Homme",
+		"pam": "1010|90",
+		"seassons": "{'Primavera':65,'Verano':25,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: hoja de tomatera, fresia, rosa, sandalo, jazmín, cedro, cuero, oud, almizcle, musgo de roble, ámbar."
+		},
+		{
+		"url": "assets/Parfums/CedratBoise.jpg",
+		"name": "Mancera - Cedrat Boise",
+		"pam": "2400|120",
+		"seassons": "{'Primavera':100,'Verano':95,'Otoño':65,'Invierno':20}",
+		"notes": "Notas: limón de sicilia, grosellas negras, bergamota, especiado, afrutado, patchulí, jazmín, cedro, cuero, sandalo, vainilla, almizcle blanco, musgo de roble."
+		},
+		{
+		"url": "assets/Parfums/OudLemonMint.png",
+		"name": "Mancera - Aoud Lemon Mint",
+		"pam": "2000|120",
+		"seassons": "{'Primavera':100,'Verano':85,'Otoño':80,'Invierno':20}",
+		"notes": "Notas: limón, almendra, cilantro, pimienta, oud, patchulí, jazmín de Egipto, vainilla, vetiver, cuero, almizcle, ámbar."
+		},
+		{
+		"url": "assets/Parfums/OmbreLeather.jpg",
+		"name": "Tom Ford - Ombré Leather Parfum",
+		"pam": "2200|50",
+		"seassons": "{'Primavera':55,'Verano':20,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: violeta, cedro, jazmín, raíz de lirio, cuero, amaderado, tabaco."
+		},
+		{
+		"url": "assets/Parfums/FlamingRed.jpg",
+		"name": "Santi Burgas - Flaming Red",
+		"pam": "3451|100",
+		"seassons": "{'Primavera':90,'Verano':30,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: rosa de Bulgaria, oud, maracuyá, raíz de lirio, ámbar."
+		},
+		{
+		"url": "assets/Parfums/oikb.jpg",
+		"name": "Santi Burgas - ÔIKB",
+		"pam": "3450|100",
+		"seassons": "{'Primavera':85,'Verano':10,'Otoño':80,'Invierno':95}",
+		"notes": "Notas: iris, cuero, haba tonka, nuez moscada, cedro marroquí, lavanda, pimienta negra."
+		},
+		{
+		"url": "assets/Parfums/TerraeEssence.jpg",
+		"name": "Bvlgari - Bvlgari Man Terrae Essence",
+		"pam": "2300|100",
+		"seassons": "{'Primavera':70,'Verano':25,'Otoño':100,'Invierno':65}",
+		"notes": "Notas: cidra, calamansi, vetiver, raíz de lirio, terroso, resinoso."
+		},
+		{
+		"url": "assets/Parfums/OudAswaad.jpg",
+		"name": "Swiss Arabian - Oud Aswad",
+		"pam": "1300|75",
+		"seassons": "{'Primavera':30,'Verano':10,'Otoño':90,'Invierno':100}",
+		"notes": "Notas: rosa, azafrán, amaderado, tomillo, oud, patchulí, comino, cilantro, jazmín, cuero, ámbar, sandalo, vainilla, almizcle."
+		},
+		{
+		"url": "assets/Parfums/vibranleather.jpg",
+		"name": "Zara - Vibrant Leather EDP",
+		"pam": "1100|100",
+		"seassons": "{'Primavera':100,'Verano':100,'Otoño':50,'Invierno':25}",
+		"notes": "Notas: bergamota, bambú, cuero, patchulí."
+		},
+		{
+		"url": "assets/Parfums/sunriseOnTheRedSandDunes.jpg",
+		"name": "Zara - Sunrise on the red sand dunes",
+		"pam": "700|100",
+		"seassons": "{'Primavera':95,'Verano':100,'Otoño':20,'Invierno':10}",
+		"notes": "Notas: mandarina, bergamota, flor de azahar, jengibre, ámbar, casis, almizcle"
+		},
+		{
+		"url": "assets/Parfums/mejesticGreen.jpg",
+		"name": "Zara - Majestic green",
+		"pam": "700|100",
+		"seassons": "{'Primavera':100,'Verano':30,'Otoño':100,'Invierno':70}",
+		"notes": "Notas: vainilla, sándalo, cardamomo, cedro, pimienta negra."
+		},
+		{
+		"url": "assets/Parfums/carvedoud.jpeg",
+		"name": "Thameen - Carved Oud",
+		"pam": "4200|50",
+		"seassons": "{'Primavera':65,'Verano':20,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: ciprés, nagarmotha, cardamomo, pimienta rosa, oud, cedro, patchulí, iris, almizcle, sandalo, vetiver de Haití, vainilla, ámbar."
+		},
+		{
+		"url": "assets/Parfums/starwalker.jpg",
+		"name": "Montblanc - Starwalker",
+		"pam": "1800|100",
+		"seassons": "{'Primavera':85,'Verano':100,'Otoño':35,'Invierno':10}",
+		"notes": "Notas: bambú, bergamota, mandarina, sándalo, almizcle blanco, cedro, jengibre, resina de abeto, nuez moscada, ámbar."
+		},
+		{
+		"url": "assets/Parfums/sauvage.jpg",
+		"name": "Dior - Sauvage EDT",
+		"pam": "2650|100",
+		"seassons": "{'Primavera':100,'Verano':80,'Otoño':80,'Invierno':50}",
+		"notes": "Notas: bergamota de Calabria, pimienta negra, pimienta de Sichuan, lavanda, pimienta rosa, vetiver, patchulí, geranio, elemí, ambroxan, cedro, ládano."
+		},
+		{
+		"url": "assets/Parfums/kredo.jpg",
+		"name": "Nishane - Kredo",
+		"pam": "4200|100",
+		"seassons": "{'Primavera':50,'Verano':15,'Otoño':95,'Invierno':100}",
+		"notes": "Notas: cardamomo, pimienta rosa, osmanto, oud, gamuza, sándalo."
+		},
+		{
+		"url": "assets/Parfums/hacivat.jpg",
+		"name": "Nishane - Hacivat",
+		"pam": "2770|50",
+		"seassons": "{'Primavera':100,'Verano':100,'Otoño':75,'Invierno':35}",
+		"notes": "Notas: piña, pomelo, bergamota, cedro, jazmín, patchulí, musgo de roble, amaderado."
+		},
+		{
+		"url": "assets/Parfums/terreHermes.jpg",
+		"name": "Hermès - Terre d'Hermes EDT",
+		"pam": "1790|100",
+		"seassons": "{'Primavera':95,'Verano':55,'Otoño':90,'Invierno':45}",
+		"notes": "Notas: naranja amarga, toronja, pimienta, pelargonio, notas minerales, vetiver, cedro, patchulí, benjuí."
+		},
+		{
+		"url": "assets/Parfums/VoyageParfum.jpg",
+		"name": "Hermès - Voyage D'hermes parfum",
+		"pam": "1790|100",
+		"seassons": "{'Primavera':95,'Verano':90,'Otoño':65,'Invierno':25}",
+		"notes": "Notas: cardamomo, limón, especiado, enebro de Virgnia, notas de té, floral, hediona, amaderado, almizcle, ámbar, sándalo."
+		},
+		{
+		"url": "assets/Parfums/atlante.jpg",
+		"name": "Sarah Baker - Atlante",
+		"pam": "3869|50",
+		"seassons": "{'Primavera':70,'Verano':100,'Otoño':25,'Invierno':10}",
+		"notes": "Notas: notas minerales, yuzu, algas marinas, conchas de mar, ámbar gris, raíz de lirio, cedro, lirio de los valles, amaderado, salado."
+		},
+		{
+		"url": "assets/Parfums/loudo.jpg",
+		"name": "Sarah Baker - Loudo",
+		"pam": "3869|50",
+		"seassons": "{'Primavera':45,'Verano':20,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: cereza, bergamota, petit grain, neroli, chocolate blanco, cipriol, flor de azahar, oud, ámbar, vainilla, almizcle."
+		},
+		{
+		"url": "assets/Parfums/boisImperial.jpg",
+		"name": "Essential Parfums - Bois Impérial",
+		"pam": "1950|100",
+		"seassons": "{'Primavera':100,'Verano':85,'Otoño':90,'Invierno':50}",
+		"notes": "Notas: akigalawood, amaderado, vetiver, albahaca, pimienta, ambroxan, patchulí, especiado."
+		},
+		{
+		"url": "assets/Parfums/divineVanille.jpg",
+		"name": "Essential Parfums - Divine Vanille",
+		"pam": "1950|100",
+		"seassons": "{'Primavera':45,'Verano':20,'Otoño':100,'Invierno':80}",
+		"notes": "Notas: esclarea, pimienta, vainilla, haba tonka ,afrutado, canela, incienso, osmanto, pomarose, benzoina, cedro texano, almizcle, patchulí"
+		},
+		{
+		"url": "assets/Parfums/tk1.jpg",
+		"name": "Thomas Kosmala - Tonic Blanc",
+		"pam": "2900|100",
+		"seassons": "{'Primavera':100,'Verano':95,'Otoño':20,'Invierno':5}",
+		"notes": "Notas: neroli, bergamota, naranja, mandarina, flor de azahar, celinda, cedro, almizcle, musgo de roble, sándalo."
+		},
+		{
+		"url": "assets/Parfums/yosly.jpg",
+		"name": "Etat Libre d'Orange - You Or Someone Like You",
+		"pam": "2200|50",
+		"seassons": "{'Primavera':90,'Verano':100,'Otoño':10,'Invierno':5}",
+		"notes": "Notas: menta, toronja, bergamota, anís, notas verdes, casis, rosa, hediona, almizcle."
+		},
+		{
+		"url": "assets/Parfums/legendspirit.jpg",
+		"name": "Montblanc - Legend Spirit",
+		"pam": "2700|200",
+		"seassons": "{'Primavera':95,'Verano':100,'Otoño':25,'Invierno':10}",
+		"notes": "Notas: toronja, bergamota, pimienta rosa, acuatico, lavanda, cardamomo, almizcle, amaderado, musgo de roble."
+		},
+		{
+		"url": "assets/Parfums/kenzoiEDTI.jpg",
+		"name": "Kenzo - EDT Intense",
+		"pam": "1350|110",
+		"seassons": "{'Primavera':100,'Verano':95,'Otoño':75,'Invierno':20}",
+		"notes": "Notas: marino, calipsone, pimienta rosa, especiado, higo, vetiver, sándalo, akigalawood, patchulí."
+		},
+		{
+		"url": "assets/Parfums/oudRosewood.jpg",
+		"name": "Christian Dior - Oud Rosewood",
+		"pam": "8900|250",
+		"seassons": "{'Primavera':20,'Verano':10,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: frambuesa, membrillo, sándalo, animalico, oud, palisandro, ahumado."
+		},
+		{
+		"url": "assets/Parfums/FeelnChill.jpg",
+		"name": "Jusbox - Feel 'N' Chill",
+		"pam": "4900|78",
+		"seassons": "{'Primavera':55,'Verano':100,'Otoño':10,'Invierno':1}",
+		"notes": "Notas: sandía, cardamomo, bergamota, hojas de higuera, coco, pino, almizcle, vetiver, ámbar."
+		},
+		{
+		"url": "assets/Parfums/albashiq.jpg",
+		"name": "Nabeel - Al Bashiq",
+		"pam": "1600|100",
+		"seassons": "{'Primavera':35,'Verano':1,'Otoño':70,'Invierno':100}",
+		"notes": "Notas: pino, cuero, almendra, canela, nuez moscada, incienso, cardamomo, ciprés, azafrán, afrutado, lavanda, toronja, bergamota, manzana, oud, mirra, franquincienso, ládano, balsámico, jazmín, terroso, ciprés, cedro, madera de gaiac, cachemira, lirio de los valles, geranio, pachulí, dulce, bálsamo de Tolú, almizcle, sándalo, vetiver, ámbar, vainilla, benjuí, haba tonka, ámbar gris, tabaco."
+		},
+		{
+		"url": "assets/Parfums/asseeralshawq.jpg",
+		"name": "Nabeel - Aseer Al Shawq Bronze",
+		"pam": "850|50",
+		"seassons": "{'Primavera':100,'Verano':100,'Otoño':1,'Invierno':45}",
+		"notes": "Notas: lima, limón, bergamota, ciruela, pimienta rosa, azafrán, geranio, lavanda, iris, jazmín, orquídea, clavel, rosa, violeta persa, ylang-ylang, oud, almizcle, sándalo, cedro, cipriol, pachulí, vainilla, ámbar gris, bálsamo de Gurjum."
+		},
+		{
+		"url": "assets/Parfums/underMySkin.jpg",
+		"name": "Francesca Bianchi - Under My Skin",
+		"pam": "2550|30",
+		"seassons": "{'Primavera':45,'Verano':10,'Otoño':100,'Invierno':95}",
+		"notes": "Notas: especiado, pimienta negra, lavanda, toronja, raíz de lirio, clavel, rosa de Bulgaria, cuero, cástoreo, almizcle, ámbar gris, bálsamo de Perú, bálsamo de Tolú, sándalo, vainilla, caña, haba tonka, musgo de roble."
+		},
+		{
+		"url": "assets/Parfums/ironDuke.jpeg",
+		"name": "Beaufort - Iron Duke",
+		"pam": "2550|50",
+		"seassons": "{'Primavera':25,'Verano':10,'Otoño':90,'Invierno':100}",
+		"notes": "Notas: cuero, pólvora, tabaco, ron."
+		},
+		{
+		"url": "assets/Parfums/equivoque.jpg",
+		"name": "Givenchi - Équivoque",
+		"pam": "7735|100",
+		"seassons": "{'Primavera':20,'Verano':10,'Otoño':90,'Invierno':90}",
+		"notes": "Notas: cardamomo, cedro de Atlas, cedro de Virginia, madera de Gaiac, oud."
+		},
+		{
+		"url": "assets/Parfums/garconManque.jpg",
+		"name": "Givenchi - Garçon manqué",
+		"pam": "6470|100",
+		"seassons": "{'Primavera':25,'Verano':10,'Otoño':75,'Invierno':100}",
+		"notes": "Notas: osmanto, cuero."
+		},
+		{
+		"url": "assets/Parfums/oudalborruz.jpg",
+		"name": "Rasasi - Oudh Al Boruzz Asrar Indonesia",
+		"pam": "3000|50",
+		"seassons": "{'Primavera':95,'Verano':85,'Otoño':90,'Invierno':70}",
+		"notes": "Notas: jengibre, bergamota, toronja, oud, vetiver, raíz de lirio, cedro, almizcle, ámbar."
+		},
+		{
+		"url": "assets/Parfums/philosykosEDT.jpg",
+		"name": "Diptyque - Philosykos EDT",
+		"pam": "3650|100",
+		"seassons": "{'Primavera':100,'Verano':100,'Otoño':20,'Invierno':10}",
+		"notes": "Notas: higo, hojas de higuera, madera de higuera."
+		},
+		{
+		"url": "assets/Parfums/NaturaEssentialElixir.jpg",
+		"name": "Natura - Essencial Elixir",
+		"pam": "800|100",
+		"seassons": "{'Primavera':30,'Verano':5,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: cardamomo, pimienta rosa, pimienta negra, mandarina, toronja, casis, limón amarillo, enebro, cuero, lavanda, violeta, geranio, coñac, vainilla, sandalo, resinoso, almizclado, vetiver, patchulí, musgo de roble."
+		},
+		{
+		"url": "assets/Parfums/JamaicaMexicana.jpg",
+		"name": "MUPE - Jamaica Mexicana",
+		"pam": "500|100",
+		"seassons": "{'Primavera':100,'Verano':45,'Otoño':100,'Invierno':80}",
+		"notes": "Notas: especiado, jamaica, rosa, ambar, pimienta rosa."
+		},
+		{
+		"url": "assets/Parfums/HayatXerjoff.jpg",
+		"name": "Xerjoff - Hayat",
+		"pam": "5020|100",
+		"seassons": "{'Primavera':80,'Verano':40,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: cedro de Atlas, azafrán, lavanda, canela, cardamomo, ambarado, oud, cipriol, patchulí."
+		},
+		{
+		"url": "assets/Parfums/Onekh.jpg",
+		"name": "Bvlgari - Onekh",
+		"pam": "8500|100",
+		"seassons": "{'Primavera':30,'Verano':20,'Otoño':90,'Invierno':100}",
+		"notes": "Notas: cuero, oud, especiado, ládano, ahumado."
+		},
+		{
+		"url": "assets/Parfums/OudRainTropicalStorm.jpg",
+		"name": "Renier - Oud Rain Tropical Storm",
+		"pam": "3250|50",
+		"seassons": "{'Primavera':100,'Verano':90,'Otoño':80,'Invierno':35}",
+		"notes": "Notas: mango, piña, mandarina, ciprés, oud, sandalo, nuez moscada, azafrán, cedro, tabaco."
+		}
+]
+}

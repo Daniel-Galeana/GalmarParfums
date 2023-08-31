@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,314 +18,164 @@
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <title>Galmar Parfums</title>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<body id="BodyG">
+  <nav style="background-color: #3FA796;" class="navbar sticky-top navbar-expand-lg navbar-dark p-0" id="headerNav">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Galmar Parfums</a>
+      <a id="LogoInicioResponsive" class="navbar-brand d-block d-lg-none CPointer">
+        <img src="assets/MinLogo.svg" height="45" />
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto" style="padding-left: 2rem !important;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            <a id="BtnInicio" class="nav-link mx-2 CPointer" aria-current="page">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a id="BtnDecants" class="nav-link mx-2 CPointer">Decants</a>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a id="LogoInicio" class="nav-link mx-2 CPointer">
+              <img src="assets/MinLogo.svg" height="45" />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="BtnNosotros" class="nav-link mx-2 CPointer">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a id="BtnContacto" class="nav-link mx-2 CPointer">Contacto</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="divOurs">
-    <div>
-      <img src="assets/logoHeader.png" alt="our_image" class="imgOur">
+  <header>
+    <div id="ContentHeader" class="contenidoP">
+      <div class="textos-header">
+        <h1>Galmar Parfums</h1>
+        <h2>Los perfumes que gustes al alcance de un clic</h2>
+        <button id="btnCotizarWA" class="material-bubble">Quiero Cotizar!</button>
+      </div>
+      <div class="img-header">
+        <img src="/assets/ContainerIMGP.png" alt="">
+      </div>
     </div>
-    <div style="margin-left: 20px;text-align: center;margin-right: 20px;">
-      <p class="pOur">— Nosotros —</p>
-      <p style="font-size: 20px;">El proposito de Galmar Parfums es poder dar un viaje aromatico a traves de los
-        diferentes perfumes de la coleccion.</p>
-      <p style="font-size: 20px;">Hacer que mas gente se apasione por la perfumeria y dar a conocer aromas fuera de lo
-        comercial</p>
+    <div class="absolute"></div>
+  </header>
+  <div>
+    <div id="ContainerQuienesSomos" class="ContainerQuienesSomos"
+      style="display: flex;justify-content: space-between;margin-top: 1%;margin-bottom: 2%;">
+      <div class="TextoQuienesSomos" style="display: flex;flex-direction: column;margin-left: 15%;">
+        <p class="pOur" style="font-family: lobster two;">Quienes somos</p>
+        <p class="pOurs2">Galmar Parfums nace con la idea de poder trasmitir sensaciones y sentimientos a
+          traves de los aromas. </p>
+        <p class="pOurs2">"Como quieres que te recuerden?" Esta fue la premisa para buscar aromas fuera de lo
+          comun para tener una distincion a las demas personas.</p>
+        <p class="pOurs2">Un perfume unico para una persona unica. A traves de la coleccion queremos compartir
+          estos aromas que te hagan sentir feliz, vigorizante y especial para esas salidas donde querramos destacar.</p>
+        <p class="pOurs2">Dar a conocer a la gente que hay un mundo de aromas ahi afuera esperando ser
+          descubierto.</p>
+      </div>
+      <img src="assets/logoHeader.png" alt="our_image" class="imgOur">
     </div>
   </div>
   <section class="sct1 parallax-section">
     Decants
   </section>
   <a id="demo02" class="d-none" href="#modal-02">DEMO02</a>
-  <div style="margin-bottom: 1%;">
-    <div style="display: flex;justify-content: center;">
-      <input autocomplete="off" class="form-control BusquedaPerfumes" autocomplete="false" type="text" id="search-input" placeholder="Buscar por nombre...">
+  <div id="ContainerParfumsAndSearch" style="margin-bottom: 1%;position: relative;overflow: inherit;">
+    <div class="flexbox">
+      <div class="search">
+        <div>
+          <input autocomplete="off" id="search-input" type="text" placeholder="Buscar por nombre..." required>
+        </div>
+      </div>
     </div>
-    <div id="perfumes-container">
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/375x500.61856.jpg">
-        <div class="perfume-name">Jean Paul Gaultier - Le Male Le Parfum</div>
-        <div class="perfume-p" ptv="2700|125" seassons="{'Primavera':50,'Verano':10,'Otoño':100,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: cardamomo, lavanda, iris, vainilla, especiado, amaderado.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/Shura.jpg">
-        <div class="perfume-name">Rasasi - Shuhrah Pour Homme</div>
-        <div class="perfume-p" ptv="1010|90" seassons="{'Primavera':65,'Verano':25,'Otoño':100,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: hoja de tomatera, fresia, rosa, sandalo, jazmín, cedro, cuero, oud, almizcle, musgo de roble, ámbar.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/CedratBoise.jpg">
-        <div class="perfume-name">Mancera - Cedrat Boise</div>
-        <div class="perfume-p" ptv="2400|120" seassons="{'Primavera':100,'Verano':95,'Otoño':65,'Invierno':20}"></div>
-        <div class="perfume-description" style="display: none;">Notas: limón de sicilia, grosellas negras, bergamota, especiado, afrutado, patchulí, jazmín, cedro, cuero, sandalo, vainilla, almizcle blanco, musgo de roble.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/OudLemonMint.png">
-        <div class="perfume-name">Mancera - Aoud Lemon Mint</div>
-        <div class="perfume-p" ptv="2000|120" seassons="{'Primavera':100,'Verano':85,'Otoño':80,'Invierno':20}"></div>
-        <div class="perfume-description" style="display: none;">Notas: limón, almendra, cilantro, pimienta, oud, patchulí, jazmín de Egipto, vainilla, vetiver, cuero, almizcle, ámbar.</div>
-      </div> 
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/OmbreLeather.jpg">
-        <div class="perfume-name">Tom Ford - Ombré Leather Parfum</div>
-        <div class="perfume-p" ptv="2200|50" seassons="{'Primavera':55,'Verano':20,'Otoño':100,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: violeta, cedro, jazmín, raíz de lirio, cuero, amaderado, tabaco.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/FlamingRed.jpg" alt="Perfume 3">
-        <div class="perfume-name">Santi Burgas - Flaming Red</div>
-        <div class="perfume-p" ptv="3451|100" seassons="{'Primavera':90,'Verano':30,'Otoño':100,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: rosa de Bulgaria, oud, maracuyá, raíz de lirio, ámbar.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/oikb.jpg">
-        <div class="perfume-name">Santi Burgas - ÔIKB </div>
-        <div class="perfume-p" ptv="3450|100" seassons="{'Primavera':85,'Verano':10,'Otoño':80,'Invierno':95}"></div>
-        <div class="perfume-description" style="display: none;">Notas: iris, cuero, haba tonka, nuez moscada, cedro marroquí, lavanda, pimienta negra</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/TerraeEssence.jpg">
-        <div class="perfume-name">Bvlgari - Bvlgari Man Terrae Essence</div>
-        <div class="perfume-p" ptv="2300|100" seassons="{'Primavera':70,'Verano':25,'Otoño':100,'Invierno':65}"></div>
-        <div class="perfume-description" style="display: none;">Notas: cidra, calamansi, vetiver, raíz de lirio, terroso, resinoso.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/OudAswaad.jpg">
-        <div class="perfume-name">Swiss Arabian - Oud Aswad</div>
-        <div class="perfume-p" ptv="1300|75" seassons="{'Primavera':30,'Verano':10,'Otoño':90,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: rosa, azafrán, amaderado, tomillo, oud, patchulí, comino, cilantro, jazmín, cuero, ámbar, sandalo, vainilla, almizcle.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/vibranleather.jpg">
-        <div class="perfume-name">Zara - Vibrant Leather EDP</div>
-        <div class="perfume-p" ptv="1100|100" seassons="{'Primavera':100,'Verano':100,'Otoño':50,'Invierno':25}"></div>
-        <div class="perfume-description" style="display: none;">Notas: bergamota, bambú, cuero, patchulí.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/sunriseOnTheRedSandDunes.jpg">
-        <div class="perfume-name">Zara - Sunrise on the red sand dunes</div>
-        <div class="perfume-p" ptv="700|100" seassons="{'Primavera':95,'Verano':100,'Otoño':20,'Invierno':10}"></div>
-        <div class="perfume-description" style="display: none;">Notas: mandarina, bergamota, flor de azahar, jengibre, ámbar, casis, almizcle</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/mejesticGreen.jpg">
-        <div class="perfume-name">Zara - Majestic green</div>
-        <div class="perfume-p" ptv="700|100" seassons="{'Primavera':100,'Verano':30,'Otoño':100,'Invierno':70}"></div>
-        <div class="perfume-description" style="display: none;">Notas: vainilla, sándalo, cardamomo, cedro, pimienta negra.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/carvedoud.jpeg">
-        <div class="perfume-name">Thameen - Carved Oud</div>
-        <div class="perfume-p" ptv="4200|50" seassons="{'Primavera':65,'Verano':20,'Otoño':100,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: ciprés, nagarmotha, cardamomo, pimienta rosa, oud, cedro, patchulí, iris, almizcle, sandalo, vetiver de Haití, vainilla, ámbar. </div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/starwalker.jpg">
-        <div class="perfume-name">Montblanc - Starwalker</div>
-        <div class="perfume-p" ptv="1800|100" seassons="{'Primavera':85,'Verano':100,'Otoño':35,'Invierno':10}"></div>
-        <div class="perfume-description" style="display: none;">Notas: bambú, bergamota, mandarina, sándalo, almizcle blanco, cedro, jengibre, resina de abeto, nuez moscada, ámbar.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/sauvage.jpg">
-        <div class="perfume-name">Dior - Sauvage EDT</div>
-        <div class="perfume-p" ptv="2650|100" seassons="{'Primavera':100,'Verano':80,'Otoño':80,'Invierno':50}"></div>
-        <div class="perfume-description" style="display: none;">Notas: bergamota de Calabria, pimienta negra, pimienta de Sichuan, lavanda, pimienta rosa, vetiver, patchulí, geranio, elemí, ambroxan, cedro, ládano.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/kredo.jpg">
-        <div class="perfume-name">Nishane - Kredo</div>
-        <div class="perfume-p" ptv="4200|100" seassons="{'Primavera':50,'Verano':15,'Otoño':95,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: cardamomo, pimienta rosa, osmanto, oud, gamuza, sándalo.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/hacivat.jpg">
-        <div class="perfume-name">Nishane - Hacivat</div>
-        <div class="perfume-p" ptv="2770|50" seassons="{'Primavera':100,'Verano':100,'Otoño':75,'Invierno':35}"></div>
-        <div class="perfume-description" style="display: none;">Notas: piña, pomelo, bergamota, cedro, jazmín, patchulí, musgo de roble, amaderado.</div>
-      </div> 
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/terreHermes.jpg">
-        <div class="perfume-name">Hermès - Terre d'Hermes EDT</div>
-        <div class="perfume-p" ptv="1790|100" seassons="{'Primavera':95,'Verano':55,'Otoño':90,'Invierno':45}"></div>
-        <div class="perfume-description" style="display: none;">Notas: naranja amarga, toronja, pimienta, pelargonio, notas minerales, vetiver, cedro, patchulí, benjuí.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/VoyageParfum.jpg">
-        <div class="perfume-name">Hermès - Voyage D'hermes parfum</div>
-        <div class="perfume-p" ptv="1790|100" seassons="{'Primavera':95,'Verano':90,'Otoño':65,'Invierno':25}"></div>
-        <div class="perfume-description" style="display: none;">Notas: cardamomo, limón, especiado, enebro de Virgnia, notas de té, floral, hediona, amaderado, almizcle, ámbar, sándalo.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/atlante.jpg">
-        <div class="perfume-name">Sarah Baker - Atlante</div>
-        <div class="perfume-p" ptv="3869|50" seassons="{'Primavera':70,'Verano':100,'Otoño':25,'Invierno':10}"></div>
-        <div class="perfume-description" style="display: none;">Notas: notas minerales, yuzu, algas marinas, conchas de mar, ámbar gris, raíz de lirio, cedro, lirio de los valles, amaderado, salado.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/loudo.jpg">
-        <div class="perfume-name">Sarah Baker - Loudo</div>
-        <div class="perfume-p" ptv="3869|50" seassons="{'Primavera':45,'Verano':20,'Otoño':100,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: cereza, bergamota, petit grain, neroli, chocolate blanco, cipriol, flor de azahar, oud, ámbar, vainilla, almizcle.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/boisImperial.jpg">
-        <div class="perfume-name">Essential Parfums - Bois Impérial</div>
-        <div class="perfume-p" ptv="1950|100" seassons="{'Primavera':100,'Verano':85,'Otoño':90,'Invierno':50}"></div>
-        <div class="perfume-description" style="display: none;">Notas: akigalawood, amaderado, vetiver, albahaca, pimienta, ambroxan, patchulí, especiado.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/divineVanille.jpg">
-        <div class="perfume-name">Essential Parfums - Divine Vanille</div>
-        <div class="perfume-p" ptv="1950|100" seassons="{'Primavera':45,'Verano':20,'Otoño':100,'Invierno':80}"></div>
-        <div class="perfume-description" style="display: none;">Notas: esclarea, pimienta, vainilla, haba tonka ,afrutado, canela, incienso, osmanto, pomarose, benzoina, cedro texano, almizcle, patchulí</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/tk1.jpg">
-        <div class="perfume-name">Thomas Kosmala - Tonic Blanc</div>
-        <div class="perfume-p" ptv="2900|100" seassons="{'Primavera':100,'Verano':95,'Otoño':20,'Invierno':5}"></div>
-        <div class="perfume-description" style="display: none;">Notas: neroli, bergamota, naranja, mandarina, flor de azahar, celinda, cedro, almizcle, musgo de roble, sándalo.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/yosly.jpg">
-        <div class="perfume-name">Etat Libre d'Orange - You Or Someone Like You</div>
-        <div class="perfume-p" ptv="2200|50" seassons="{'Primavera':90,'Verano':100,'Otoño':10,'Invierno':5}"></div>
-        <div class="perfume-description" style="display: none;">Notas: menta, toronja, bergamota, anís, notas verdes, casis, rosa, hediona, almizcle.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/legendspirit.jpg">
-        <div class="perfume-name">Montblanc - Legend Spirit</div>
-        <div class="perfume-p" ptv="2700|200" seassons="{'Primavera':95,'Verano':100,'Otoño':25,'Invierno':10}"></div>
-        <div class="perfume-description" style="display: none;">Notas: toronja, bergamota, pimienta rosa, acuatico, lavanda, cardamomo, almizcle, amaderado, musgo de roble.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/kenzoiEDTI.jpg">
-        <div class="perfume-name">Kenzo - EDT Intense</div>
-        <div class="perfume-p" ptv="1350|110" seassons="{'Primavera':100,'Verano':95,'Otoño':75,'Invierno':20}"></div>
-        <div class="perfume-description" style="display: none;">Notas: marino, calipsone, pimienta rosa, especiado, higo, vetiver, sándalo, akigalawood, patchulí.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/oudRosewood.jpg">
-        <div class="perfume-name">Christian Dior - Oud Rosewood</div>
-        <div class="perfume-p" ptv="8900|250" seassons="{'Primavera':20,'Verano':10,'Otoño':100,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: frambuesa, membrillo, sándalo, animalico, oud, palisandro, ahumado.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/FeelnChill.jpg">
-        <div class="perfume-name">Jusbox - Feel 'N' Chill</div>
-        <div class="perfume-p" ptv="4900|78" seassons="{'Primavera':55,'Verano':100,'Otoño':10,'Invierno':1}"></div>
-        <div class="perfume-description" style="display: none;">Notas: sandía, cardamomo, bergamota, hojas de higuera, coco, pino, almizcle, vetiver, ámbar.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/albashiq.jpg">
-        <div class="perfume-name">Nabeel - Al Bashiq</div>
-        <div class="perfume-p" ptv="1600|100" seassons="{'Primavera':35,'Verano':1,'Otoño':70,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: pino, cuero, almendra, canela, nuez moscada, incienso, cardamomo, ciprés, azafrán, afrutado, lavanda, toronja, bergamota, manzana, oud, mirra, franquincienso, ládano, balsámico, jazmín, terroso, ciprés, cedro, madera de gaiac, cachemira, lirio de los valles, geranio, pachulí, dulce, bálsamo de Tolú, almizcle, sándalo, vetiver, ámbar, vainilla, benjuí, haba tonka, ámbar gris, tabaco.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/asseeralshawq.jpg">
-        <div class="perfume-name">Nabeel - Aseer Al Shawq Bronze</div>
-        <div class="perfume-p" ptv="850|50" seassons="{'Primavera':100,'Verano':100,'Otoño':1,'Invierno':45}"></div>
-        <div class="perfume-description" style="display: none;">Notas: lima, limón, bergamota, ciruela, pimienta rosa, azafrán, geranio, lavanda, iris, jazmín, orquídea, clavel, rosa, violeta persa, ylang-ylang, oud, almizcle, sándalo, cedro, cipriol, pachulí, vainilla, ámbar gris, bálsamo de Gurjum.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/underMySkin.jpg">
-        <div class="perfume-name">Francesca Bianchi - Under My Skin</div>
-        <div class="perfume-p" ptv="2550|30" seassons="{'Primavera':45,'Verano':10,'Otoño':100,'Invierno':95}"></div>
-        <div class="perfume-description" style="display: none;">Notas: especiado, pimienta negra, lavanda, toronja, raíz de lirio, clavel, rosa de Bulgaria, cuero, cástoreo, almizcle, ámbar gris, bálsamo de Perú, bálsamo de Tolú, sándalo, vainilla, caña, haba tonka, musgo de roble.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/ironDuke.jpeg">
-        <div class="perfume-name">Beaufort - Iron Duke</div>
-        <div class="perfume-p" ptv="2550|50" seassons="{'Primavera':25,'Verano':10,'Otoño':90,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: cuero, pólvora, tabaco, ron</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/equivoque.jpg">
-        <div class="perfume-name">Givenchi - Équivoque </div>
-        <div class="perfume-p" ptv="7735|100" seassons="{'Primavera':20,'Verano':10,'Otoño':90,'Invierno':90}"></div>
-        <div class="perfume-description" style="display: none;">Notas: cardamomo, cedro de Atlas, cedro de Virginia, madera de Gaiac, oud.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/garconManque.jpg">
-        <div class="perfume-name">Givenchi - Garçon manqué </div>
-        <div class="perfume-p" ptv="6470|100" seassons="{'Primavera':25,'Verano':10,'Otoño':75,'Invierno':100}"></div>
-        <div class="perfume-description" style="display: none;">Notas: osmanto, cuero</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/oudalborruz.jpg">
-        <div class="perfume-name">Rasasi - Oudh Al Boruzz Asrar Indonesia </div>
-        <div class="perfume-p" ptv="3000|50" seassons="{'Primavera':95,'Verano':85,'Otoño':90,'Invierno':70}"></div>
-        <div class="perfume-description" style="display: none;">Notas: jengibre, bergamota, toronja, oud, vetiver, raíz de lirio, cedro, almizcle, ámbar.</div>
-      </div>
-      <div class="perfume">
-        <img class="perfume-image" src="assets/Parfums/philosykosEDT.jpg">
-        <div class="perfume-name">Diptyque - Philosykos EDT </div>
-        <div class="perfume-p" ptv="3650|100" seassons="{'Primavera':100,'Verano':100,'Otoño':20,'Invierno':10}"></div>
-        <div class="perfume-description" style="display: none;">Notas: higo, hojas de higuera, madera de higuera.</div>
-      </div>
+    <div id="perfumes-container" class="ParfumsContainerPadding">
     </div>
   </div>
   <div id="modal-02">
     <div id="closebt-container" class="close-modal-02">
-        <img class="closebt" src="assets/closebt-svgBlack.svg">
+      <img class="closebt" src="assets/closebt-svgBlack.svg">
     </div>
-    
     <div class="modal-content" style="border: none !important;">
       <div class="styleModalDetail">
         <div>
           <img id="modal-image" src="">
         </div>
         <div>
-          <h4 class="modal-title" id="TituloPerfume" style="margin-bottom: 2%;"></h5>
+          <h4 class="modal-title" id="TituloPerfume" style="margin-bottom: 2%;"></h4>
           <div class="form-inline">
-            <span style="padding-right: 20px;">TAMAÑO</span><label style="background-color: black;color: white;padding: 1px 39px 1px 39px;">1 ML</label>
+            <span style="padding-right: 20px;">TAMAÑO</span><label
+              style="background-color: black;color: white;padding: 1px 39px 1px 39px;">1 ML</label>
           </div>
           <div id="modal-pQuotation" style="font-size: 24px;padding-top: 2%;"></div>
-          <div style="font-size: 13px;font-style: italic;margin-top: 2%;">•Para la cotización de la botella completa, favor de mandar mensaje al número de contacto</div>
+          <div class="form-inline">
+            <div class="dropdown">
+              <div class="select">
+                <span>Selecciona la presentación</span>
+                <i style="float: right;margin-top: 4px;" class="fa fa-chevron-down"></i>
+              </div>
+              <input id="SelectValuePresentation" type="hidden">
+              <ul class="dropdown-menu">
+                <li id="M">Mililitro</li>
+                <li id="B">Botella completa</li>
+              </ul>
+            </div>
+            <button id="BtnIWantWA" class="IWantBtnWA"><span><i class="fab fa-whatsapp"></i></span> LO QUIERO!</button>
+          </div>
+          <div style="font-size: 13px;font-style: italic;margin-top: 2%;">•La cotizacion de la botella completa esta
+            sujeta a disponibilidad de la misma</div>
           <div id="modal-description"></div>
           <div class="form-inline" style="margin-top: 2%;">
-            <label class="spanSeasons" style="background-color: #00C4FF;color: white;">Invierno <i class="fas fa-snowflake"></i></label>
-            <label class="spanSeasons" style="background-color: #00DFA2;color: white;">Primavera <i class="fas fa-leaf"></i></label>
-            <label class="spanSeasons" style="background-color: #DB005B;color: white;">Verano <i class="fas fa-umbrella-beach"></i></label>
-            <label class="spanSeasons" style="background-color: #F79327;color: white;">Otoño <i class="fab fa-canadian-maple-leaf"></i></label>            
+            <label class="spanSeasons" style="background-color: #00C4FF;color: white;">Invierno <i
+                class="fas fa-snowflake"></i></label>
+            <label class="spanSeasons" style="background-color: #00DFA2;color: white;">Primavera <i
+                class="fas fa-leaf"></i></label>
+            <label class="spanSeasons" style="background-color: #DB005B;color: white;">Verano <i
+                class="fas fa-umbrella-beach"></i></label>
+            <label class="spanSeasons" style="background-color: #F79327;color: white;">Otoño <i
+                class="fab fa-canadian-maple-leaf"></i></label>
           </div>
           <div id="canvasContainer" style="display: flex;justify-content: center;">
             <canvas id="grafica" width="300" height="400"></canvas>
           </div>
-        </div>    
+        </div>
       </div>
-
     </div>
-</div>
-  <footer>
-    <p class="pMainContact">Contacto</p>
+  </div>
+  <footer id="Footer">
     <div>
-      <p><i class="fab fa-whatsapp"></i> 55 5437 4622</p>
+      <img src="assets/MinLogo.svg" height="200" />
     </div>
     <div>
-      <p><i class="fas fa-envelope"></i> hellogalmarparfums@gmail.com</p> 
+      <p class="pMainContact">Contacto</p>
+      <div>
+        <p><i class="fab fa-whatsapp"></i> 55 5437 4622</p>
+      </div>
+      <div>
+        <p><i class="fas fa-envelope"></i> infogalmarparfums@gmail.com</p>
+      </div>
+      <div>
+      </div>
+    </div>
+    <div>
+      <p class="pMainContact">Mensaje</p>
+      <div class="form-floating">
+        <textarea style="width: 350px;height: 119px;" class="form-control" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Dudas o cotizaciones</label>
+      </div>
+      <button id="btnSendFooter" class="btnSendFooter">Enviar</button>
     </div>
   </footer>
   <div class="subFooter">
     <p>©2023 Galmar Parfums | All Rights Reserved</p>
   </div>
-  <a id="subir" class="gototop">↑</a>
   <script src="lib/animatedModal/animatedModal.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>

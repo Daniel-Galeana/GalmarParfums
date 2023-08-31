@@ -6,7 +6,6 @@ const TituloPerfume = document.getElementById('TituloPerfume');
 const TituloPerfumeQuotation = document.getElementById('TituloPerfumeQuotation');
 const modalDescription = document.getElementById('modal-description');
 const modalClose = document.getElementById('modal-close');
-const subir = document.getElementById('subir')
 
 $("#demo02").animatedModal({
   animatedIn: 'zoomIn',
@@ -18,36 +17,39 @@ $("#demo02").animatedModal({
       $('#modal-02').scrollTop(0);
     }, 100);
   },
-  afterOpen: function () {  
-    localStorage.setItem('mdlIsopen',1)
+  afterOpen: function () {
+    localStorage.setItem('mdlIsopen', 1)
   },
   beforeClose: function () {
+    $('#BodyG').removeAttr('style')
     //console.log("The animation was called");
   },
   afterClose: function () {
-    localStorage.setItem('mdlIsopen',0)
+    localStorage.setItem('mdlIsopen', 0)
   }
 });
 
-$(document).ready(function () {
+$(document).ready(async function () {
   $(window).on('popstate', function () {
-    if(localStorage['mdlIsopen'] == 1){
-      $('.closebt').click();      
+    if (localStorage['mdlIsopen'] == 1) {
+      $('.closebt').click();
       setTimeout(() => {
         window.scroll('', localStorage['yAxisLocation']);
       }, 100);
-    }else{
+    } else {
       $(window).scrollTop(0);
     }
   });
+  //Lectura del json
+  let JsonToPaint = await LeerJson('assets/Json/Parfums.json')
+  PintarMenuParfums(JsonToPaint);
+  console.log(JsonToPaint)
 })
 
-
-
-subir.addEventListener('click', () => {
-  $(window).scrollTop(0);
+$('#btnCotizarWA').on('click', () => {
+  var url = 'https://api.whatsapp.com/send?phone=5554374622&text=Que tal, me gustaría cotizar un perfume'
+  window.open(url);
 })
-
 
 // Función para mostrar el modal con el perfume seleccionado
 function mostrarModal(src, descripcion, nombre, p, seasson) {
@@ -68,7 +70,7 @@ function mostrarModal(src, descripcion, nombre, p, seasson) {
 };
 
 // Event listeners
-perfumesContainer.addEventListener('click', e => {  
+perfumesContainer.addEventListener('click', e => {
   localStorage.setItem('yAxisLocation', window.scrollY);
   const perfume = e.target.closest('.perfume');
   if (perfume) {
@@ -153,3 +155,136 @@ const PintarGrafica = (json) => {
     }
   });
 };
+
+$("#BtnNosotros").click(function () {
+  $('html, body').animate({
+    scrollTop: $("#ContainerQuienesSomos").offset().top
+  }, 100);
+});
+
+$("#BtnDecants").click(function () {
+  $('html, body').animate({
+    scrollTop: $("#ContainerParfumsAndSearch").offset().top
+  }, 100);
+});
+
+$("#BtnContacto").click(function () {
+  $('html, body').animate({
+    scrollTop: $("#Footer").offset().top
+  }, 100);
+});
+
+$("#BtnInicio").click(function () {
+  $(window).scrollTop(0);
+});
+
+$("#LogoInicio").click(function () {
+  $(window).scrollTop(0);
+});
+
+$("#LogoInicioResponsive").click(function () {
+  $(window).scrollTop(0);
+});
+
+const InputSearchHover = () => {
+  if($("#search-input").hasClass('active')){
+    if($("#search-input").val().length <= 0){
+      $("#search-input").blur();
+      console.log('cerrando input')
+    }
+  }
+}
+
+const elContainerParfums = document.getElementById('perfumes-container')
+elContainerParfums.onwheel = InputSearchHover;
+elContainerParfums.addEventListener('touchmove', function(event){
+  //Comprobamos si hay varios eventos del mismo tipo
+  if (event.targetTouches.length == 1) { 
+  var touch = event.targetTouches[0]; 
+  // con esto solo se procesa UN evento touch
+    if($("#search-input").hasClass('active')){
+      if($("#search-input").val().length <= 0){
+        $("#search-input").blur();
+      }
+    }
+  }
+})
+
+$('#search-input').on('focus blur', (e) =>{
+  let id = e.target.id
+  if(e.type == 'focus'){
+    if($('#'+ id).hasClass('inActive')){
+      $('#'+ id).removeClass('inActive')
+    }
+    $('#'+ id).addClass('active')
+  }else if(e.type == 'blur'){
+    if($('#'+ id).hasClass('active')){
+      $('#'+ id).removeClass('active')
+    }
+    $('#'+ id).addClass('inActive')
+  }
+})
+
+$('#btnSendFooter').on('click', () => {
+  if($('#floatingTextarea').val().length > 0){
+    let Msg = $('#floatingTextarea').val()
+    let url = 'https://api.whatsapp.com/send?phone=5554374622&text='+ Msg +''
+    window.open(url);
+    $('#floatingTextarea').val('')
+  }
+})
+
+$('#BtnIWantWA').on('click', () => {
+  if($('#SelectValuePresentation').val() == 'M'){
+    let Msg = 'Hola, me gustaria adquirir mililitros del perfume *' + $('#TituloPerfume').text() + '*'
+    let url = 'https://api.whatsapp.com/send?phone=5554374622&text='+ Msg +''
+    window.open(url);
+  }else if($('#SelectValuePresentation').val() == 'B'){
+    let Msg = 'Hola, me gustaria adquirir la botella de *' + $('#TituloPerfume').text() + '*'
+    let url = 'https://api.whatsapp.com/send?phone=5554374622&text='+ Msg +''
+    window.open(url);
+  }
+})
+
+$('.dropdown').click(function () {
+  $(this).attr('tabindex', 1).focus();
+  $(this).toggleClass('active');
+  $(this).find('.dropdown-menu').slideToggle(300);
+});
+$('.dropdown').focusout(function () {
+  $(this).removeClass('active');
+  $(this).find('.dropdown-menu').slideUp(300);
+});
+$('.dropdown .dropdown-menu li').click(function () {
+  $(this).parents('.dropdown').find('span').text($(this).text());
+  $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+});
+
+const LeerJson = async  (JsonUrl) => {
+  let result = {};
+  await fetch(JsonUrl)
+      .then(res => res.json())
+      .catch(error => {
+          console.log('File not found')
+      })
+      .then(response => {
+          result = response;
+      });
+  return result;
+}
+
+const PintarMenuParfums = (menu) =>{
+  let ElToAppend = ''
+  let TextToAppend = ''
+  for(let p in menu.menuParfums){
+    TextToAppend = ''
+    TextToAppend += '<div class="perfume">'
+    TextToAppend += '<img class="perfume-image" src="'+ menu.menuParfums[p].url +'">'
+    TextToAppend += '<div class="perfume-name">'+ menu.menuParfums[p].name +'</div>'
+    TextToAppend += '<div class="perfume-p" ptv="'+ menu.menuParfums[p].pam +'" seassons="'+ menu.menuParfums[p].seassons +'"></div>'
+    TextToAppend += '<div class="perfume-description" style="display: none;">'+ menu.menuParfums[p].notes +'</div>'
+    TextToAppend += '</div>'
+    ElToAppend += TextToAppend
+  }
+  $('#perfumes-container').append(ElToAppend)
+}
