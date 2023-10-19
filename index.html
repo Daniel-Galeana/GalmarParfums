@@ -20,159 +20,159 @@
 </head>
 
 <body id="BodyG">
-  <nav style="background-color: #3FA796;" class="navbar sticky-top navbar-expand-lg navbar-dark p-0" id="headerNav">
-    <div class="container-fluid">
-      <a id="LogoInicioResponsive" class="navbar-brand d-block d-lg-none CPointer">
-        <img src="assets/MinLogo.svg" height="45" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mx-auto" style="padding-left: 2rem !important;">
-          <li class="nav-item">
-            <a id="BtnInicio" class="nav-link mx-2 CPointer" aria-current="page">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a id="BtnDecants" class="nav-link mx-2 CPointer">Decants</a>
-          </li>
-          <li class="nav-item d-none d-lg-block">
-            <a id="LogoInicio" class="nav-link mx-2 CPointer">
-              <img src="assets/MinLogo.svg" height="45" />
-            </a>
-          </li>
-          <li class="nav-item">
-            <a id="BtnNosotros" class="nav-link mx-2 CPointer">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a id="BtnContacto" class="nav-link mx-2 CPointer">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <header>
-    <div id="ContentHeader" class="contenidoP">
-      <div class="textos-header">
-        <h1>Galmar Parfums</h1>
-        <h2>Los perfumes que gustes al alcance de un clic</h2>
-        <button id="btnCotizarWA" class="material-bubble">Quiero Cotizar!</button>
-      </div>
-      <div class="img-header">
-        <img src="/assets/ContainerIMGP.png" alt="">
-      </div>
-    </div>
-    <div class="absolute"></div>
-  </header>
-  <div>
-    <div id="ContainerQuienesSomos" class="ContainerQuienesSomos"
-      style="display: flex;justify-content: space-between;margin-top: 1%;margin-bottom: 2%;">
-      <div class="TextoQuienesSomos" style="display: flex;flex-direction: column;margin-left: 15%;">
-        <p class="pOur" style="font-family: lobster two;">Quienes somos</p>
-        <p class="pOurs2">Galmar Parfums nace con la idea de poder trasmitir sensaciones y sentimientos a
-          traves de los aromas. </p>
-        <p class="pOurs2">"Como quieres que te recuerden?" Esta fue la premisa para buscar aromas fuera de lo
-          comun para tener una distincion a las demas personas.</p>
-        <p class="pOurs2">Un perfume unico para una persona unica. A traves de la coleccion queremos compartir
-          estos aromas que te hagan sentir feliz, vigorizante y especial para esas salidas donde querramos destacar.</p>
-        <p class="pOurs2">Dar a conocer a la gente que hay un mundo de aromas ahi afuera esperando ser
-          descubierto.</p>
-      </div>
-      <img src="assets/logoHeader.png" alt="our_image" class="imgOur">
-    </div>
+  <div class="loader-wrapper fade-out">
+    <div class="loader"></div>
   </div>
-  <section class="sct1 parallax-section">
-    Decants
-  </section>
-  <a id="demo02" class="d-none" href="#modal-02">DEMO02</a>
-  <div id="ContainerParfumsAndSearch" style="margin-bottom: 1%;position: relative;overflow: inherit;">
-    <div class="flexbox">
-      <div class="search">
-        <div>
-          <input autocomplete="off" id="search-input" type="text" placeholder="Buscar por nombre..." required>
+  <div class="content">
+    <nav style="background-color: #3FA796;" class="navbar sticky-top navbar-expand-lg navbar-dark p-0" id="headerNav">
+      <div class="container-fluid">
+        <a id="LogoInicioResponsive" class="navbar-brand d-block d-lg-none CPointer">
+          <img src="assets/MinLogo.svg" height="45" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto" style="padding-left: 2rem !important;">
+            <li class="nav-item">
+              <a id="BtnInicio" class="nav-link mx-2 CPointer" aria-current="page">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a id="BtnDecants" class="nav-link mx-2 CPointer">Decants</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a id="LogoInicio" class="nav-link mx-2 CPointer">
+                <img src="assets/MinLogo.svg" height="45" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a id="BtnNosotros" class="nav-link mx-2 CPointer">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a id="BtnContacto" class="nav-link mx-2 CPointer">Contacto</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div id="perfumes-container" class="ParfumsContainerPadding">
-    </div>
-  </div>
-  <div id="modal-02">
-    <div id="closebt-container" class="close-modal-02">
-      <img class="closebt" src="assets/closebt-svgBlack.svg">
-    </div>
-    <div class="modal-content" style="border: none !important;">
-      <div class="styleModalDetail">
-        <div>
-          <img id="modal-image" src="">
+    </nav>
+    <header class="Hheader">
+      <div id="ContentHeader" class="contenidoP">
+        <div class="textos-header">
+          <h1>Galmar Parfums</h1>
+          <h2>Los perfumes que gustes al alcance de un clic</h2>
+          <button id="btnCotizarWA" class="material-bubble">Quiero Cotizar!</button>
         </div>
-        <div>
-          <h4 class="modal-title" id="TituloPerfume" style="margin-bottom: 2%;"></h4>
-          <div class="form-inline">
-            <span style="padding-right: 20px;">TAMAÑO</span><label
-              style="background-color: black;color: white;padding: 1px 39px 1px 39px;">1 ML</label>
+        <div class="img-header">
+          <img class="imgAnimated" src="/assets/ContainerIMGP.png" alt="">
+        </div>
+      </div>
+      <div class="absolute"></div>
+    </header>
+    <div id="quienesSomosSection"></div>
+    <div>
+      <div id="ContainerQuienesSomos" class="ContainerQuienesSomos"
+        style="display: flex;justify-content: space-between;margin-top: 1%;margin-bottom: 2%;padding-left: 21%;padding-right: 21%;">
+        <div class="TextoQuienesSomos" style="display: flex;flex-direction: column;">
+          <p class="pOur divFade" style="font-family: lobster two;">Quienes somos</p>
+          <p class="pOurs2 divFade" style="text-align: justify;">Galmar Parfums nace con la idea de poder trasmitir sensaciones y sentimientos a traves de los aromas.Como quieres que te recuerden?" Esta fue la premisa para buscar aromas fuera de lo comun para tener una distincion a las demas personas.Un perfume unico para una persona unica. A traves de la coleccion queremos compartir estos aromas que te hagan sentir feliz, vigorizante y especial para esas salidas donde querramos destacar. Dar a conocer a la gente que hay un mundo de aromas ahi afuera esperando ser descubierto.</p>      
+        </div>
+        <img src="assets/logoHeader.png" alt="our_image" class="imgOur divFade">
+      </div>
+    </div>
+    <div id="decantsSection"></div>
+    <section class="sct1 parallax-section">
+      Decants
+    </section>
+    <a id="demo02" class="d-none" href="#modal-02">DEMO02</a>
+    <div id="ContainerParfumsAndSearch" style="margin-bottom: 1%;position: relative;overflow: inherit;">
+      <div class="flexbox">
+        <div class="search">
+          <div>
+            <input autocomplete="off" id="search-input" type="text" placeholder="Buscar por nombre..." required>
           </div>
-          <div id="modal-pQuotation" style="font-size: 24px;padding-top: 2%;"></div>
-          <div class="form-inline">
-            <div class="dropdown">
-              <div class="select">
-                <span>Selecciona la presentación</span>
-                <i style="float: right;margin-top: 4px;" class="fa fa-chevron-down"></i>
-              </div>
-              <input id="SelectValuePresentation" type="hidden">
-              <ul class="dropdown-menu">
-                <li id="M">Mililitro</li>
-                <li id="B">Botella completa</li>
-              </ul>
+        </div>
+      </div>
+      <div id="perfumes-container" class="ParfumsContainerPadding">
+      </div>
+    </div>
+    <div id="modal-02">
+      <div id="closebt-container" class="close-modal-02">
+        <img class="closebt" src="assets/closebt-svgBlack.svg">
+      </div>
+      <div class="modal-content" style="border: none !important;">
+        <div class="styleModalDetail">
+          <div>
+            <img id="modal-image" src="">
+          </div>
+          <div>
+            <h4 class="modal-title" id="TituloPerfume" style="margin-bottom: 2%;"></h4>
+            <div class="form-inline">
+              <span style="padding-right: 20px;">TAMAÑO</span><label
+                style="background-color: black;color: white;padding: 1px 39px 1px 39px;">1 ML</label>
             </div>
-            <button id="BtnIWantWA" class="IWantBtnWA"><span><i class="fab fa-whatsapp"></i></span> LO QUIERO!</button>
-          </div>
-          <div style="font-size: 13px;font-style: italic;margin-top: 2%;">•La cotizacion de la botella completa esta
-            sujeta a disponibilidad de la misma</div>
-          <div id="modal-description"></div>
-          <div class="form-inline" style="margin-top: 2%;">
-            <label class="spanSeasons" style="background-color: #00C4FF;color: white;">Invierno <i
-                class="fas fa-snowflake"></i></label>
-            <label class="spanSeasons" style="background-color: #00DFA2;color: white;">Primavera <i
-                class="fas fa-leaf"></i></label>
-            <label class="spanSeasons" style="background-color: #DB005B;color: white;">Verano <i
-                class="fas fa-umbrella-beach"></i></label>
-            <label class="spanSeasons" style="background-color: #F79327;color: white;">Otoño <i
-                class="fab fa-canadian-maple-leaf"></i></label>
-          </div>
-          <div id="canvasContainer" style="display: flex;justify-content: center;">
-            <canvas id="grafica" width="300" height="400"></canvas>
+            <div id="modal-pQuotation" style="font-size: 24px;padding-top: 2%;"></div>
+            <div class="form-inline">
+              <div class="dropdown">
+                <div class="select">
+                  <span>Selecciona la presentación</span>
+                  <i style="float: right;margin-top: 4px;" class="fa fa-chevron-down"></i>
+                </div>
+                <input id="SelectValuePresentation" type="hidden">
+                <ul class="dropdown-menu">
+                  <li id="M">Mililitro</li>
+                  <li id="B">Botella completa</li>
+                </ul>
+              </div>
+              <button id="BtnIWantWA" class="IWantBtnWA"><span><i class="fab fa-whatsapp"></i></span> LO QUIERO!</button>
+            </div>
+            <div style="font-size: 13px;font-style: italic;margin-top: 2%;">•La cotizacion de la botella completa esta
+              sujeta a disponibilidad de la misma</div>
+            <div id="modal-description"></div>
+            <div class="form-inline" style="margin-top: 2%;">
+              <label class="spanSeasons" style="background-color: #00C4FF;color: white;">Invierno <i
+                  class="fas fa-snowflake"></i></label>
+              <label class="spanSeasons" style="background-color: #00DFA2;color: white;">Primavera <i
+                  class="fas fa-leaf"></i></label>
+              <label class="spanSeasons" style="background-color: #DB005B;color: white;">Verano <i
+                  class="fas fa-umbrella-beach"></i></label>
+              <label class="spanSeasons" style="background-color: #F79327;color: white;">Otoño <i
+                  class="fab fa-canadian-maple-leaf"></i></label>
+            </div>
+            <div id="canvasContainer" style="display: flex;justify-content: center;">
+              <canvas id="grafica" width="300" height="400"></canvas>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <footer id="Footer">
-    <div>
-      <img src="assets/MinLogo.svg" height="200" />
-    </div>
-    <div>
-      <p class="pMainContact">Contacto</p>
+    <footer id="Footer">
       <div>
-        <p><i class="fab fa-whatsapp"></i> 55 5437 4622</p>
+        <img src="assets/MinLogo.svg" height="200" />
       </div>
       <div>
-        <p><i class="fas fa-envelope"></i> infogalmarparfums@gmail.com</p>
+        <p class="pMainContact">Contacto</p>
+        <div>
+          <p><i class="fab fa-whatsapp"></i> 55 5437 4622</p>
+        </div>
+        <div>
+          <p><i class="fas fa-envelope"></i> infogalmarparfums@gmail.com</p>
+        </div>
+        <div>
+        </div>
       </div>
       <div>
+        <p class="pMainContact">Mensaje</p>
+        <div class="form-floating">
+          <textarea style="width: 350px;height: 119px;" class="form-control" id="floatingTextarea"></textarea>
+          <label for="floatingTextarea">Dudas o cotizaciones</label>
+        </div>
+        <button id="btnSendFooter" class="btnSendFooter">Enviar</button>
       </div>
+    </footer>
+    <div class="subFooter">
+      <p>©2023 Galmar Parfums | All Rights Reserved</p>
     </div>
-    <div>
-      <p class="pMainContact">Mensaje</p>
-      <div class="form-floating">
-        <textarea style="width: 350px;height: 119px;" class="form-control" id="floatingTextarea"></textarea>
-        <label for="floatingTextarea">Dudas o cotizaciones</label>
-      </div>
-      <button id="btnSendFooter" class="btnSendFooter">Enviar</button>
-    </div>
-  </footer>
-  <div class="subFooter">
-    <p>©2023 Galmar Parfums | All Rights Reserved</p>
   </div>
   <script src="lib/animatedModal/animatedModal.js"></script>
   <script src="js/main.js"></script>

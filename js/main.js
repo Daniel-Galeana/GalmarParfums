@@ -30,6 +30,8 @@ $("#demo02").animatedModal({
 });
 
 $(document).ready(async function () {
+  closeNavOnWhellMobile()
+  window.addEventListener('resize', resizing);
   $(window).on('popstate', function () {
     if (localStorage['mdlIsopen'] == 1) {
       $('.closebt').click();
@@ -43,7 +45,30 @@ $(document).ready(async function () {
   //Lectura del json
   let JsonToPaint = await LeerJson('assets/Json/Parfums.json')
   PintarMenuParfums(JsonToPaint);
-  console.log(JsonToPaint)
+  let elementsArray = document.querySelectorAll(".divFade");
+  window.addEventListener('scroll', fadeIn);
+  function fadeIn() {
+    for (var i = 0; i < elementsArray.length; i++) {
+      var elem = elementsArray[i]
+      var distInView = elem.getBoundingClientRect().top - window.innerHeight + 20;
+      if (distInView < 0) {
+        elem.classList.add("inView");
+      } else {
+        elem.classList.remove("inView");
+      }
+    }
+  }
+  fadeIn();
+
+  //$(".loader-wrapper").fadeOut(CompletedX());
+  $(".loader-wrapper").addClass('hide');
+  const content = document.querySelector('.content');
+  setTimeout(function() {
+    $(".loader-wrapper").remove();
+    content.style.display = 'block';
+  }, 2500);
+
+  calcularHeaderDimentions()
 })
 
 $('#btnCotizarWA').on('click', () => {
@@ -157,91 +182,108 @@ const PintarGrafica = (json) => {
 };
 
 $("#BtnNosotros").click(function () {
+  let ToScroll; 
+  if($('#navbarNavDropdown').prop('class') == 'navbar-collapse collapse show'){
+    ToScroll = $("#quienesSomosSection").offset().top - 160
+  }else{
+    ToScroll = $("#quienesSomosSection").offset().top
+  }
   $('html, body').animate({
-    scrollTop: $("#ContainerQuienesSomos").offset().top
+    scrollTop: ToScroll
   }, 100);
+  closingNavOnMobile()
 });
 
 $("#BtnDecants").click(function () {
+  let ToScroll; 
+  if($('#navbarNavDropdown').prop('class') == 'navbar-collapse collapse show'){
+    ToScroll = $("#decantsSection").offset().top - 160
+  }else{
+    ToScroll = $("#decantsSection").offset().top
+  }
   $('html, body').animate({
-    scrollTop: $("#ContainerParfumsAndSearch").offset().top
+    scrollTop: ToScroll
   }, 100);
+  closingNavOnMobile()
 });
 
 $("#BtnContacto").click(function () {
   $('html, body').animate({
     scrollTop: $("#Footer").offset().top
   }, 100);
+  closingNavOnMobile()
 });
 
 $("#BtnInicio").click(function () {
   $(window).scrollTop(0);
+  closingNavOnMobile()
 });
 
 $("#LogoInicio").click(function () {
   $(window).scrollTop(0);
+  closingNavOnMobile()
 });
 
 $("#LogoInicioResponsive").click(function () {
   $(window).scrollTop(0);
+  closingNavOnMobile()
 });
 
 const InputSearchHover = () => {
-  if($("#search-input").hasClass('active')){
-    if($("#search-input").val().length <= 0){
+  if ($("#search-input").hasClass('active')) {
+    if ($("#search-input").val().length <= 0) {
       $("#search-input").blur();
-      console.log('cerrando input')
     }
   }
 }
 
 const elContainerParfums = document.getElementById('perfumes-container')
 elContainerParfums.onwheel = InputSearchHover;
-elContainerParfums.addEventListener('touchmove', function(event){
+elContainerParfums.addEventListener('touchmove', function (event) {
   //Comprobamos si hay varios eventos del mismo tipo
-  if (event.targetTouches.length == 1) { 
-  var touch = event.targetTouches[0]; 
-  // con esto solo se procesa UN evento touch
-    if($("#search-input").hasClass('active')){
-      if($("#search-input").val().length <= 0){
+  if (event.targetTouches.length == 1) {
+    var touch = event.targetTouches[0];
+    // con esto solo se procesa UN evento touch
+    if ($("#search-input").hasClass('active')) {
+      if ($("#search-input").val().length <= 0) {
         $("#search-input").blur();
       }
     }
   }
 })
 
-$('#search-input').on('focus blur', (e) =>{
+$('#search-input').on('focus blur', (e) => {
   let id = e.target.id
-  if(e.type == 'focus'){
-    if($('#'+ id).hasClass('inActive')){
-      $('#'+ id).removeClass('inActive')
+  if (e.type == 'focus') {
+    if ($('#' + id).hasClass('inActive')) {
+      $('#' + id).removeClass('inActive')
     }
-    $('#'+ id).addClass('active')
-  }else if(e.type == 'blur'){
-    if($('#'+ id).hasClass('active')){
-      $('#'+ id).removeClass('active')
+    $('#' + id).addClass('active')
+  } else if (e.type == 'blur') {
+    if ($('#' + id).hasClass('active')) {
+      $('#' + id).removeClass('active')
     }
-    $('#'+ id).addClass('inActive')
+    $('#' + id).addClass('inActive')
   }
 })
 
 $('#btnSendFooter').on('click', () => {
-  if($('#floatingTextarea').val().length > 0){
+  if ($('#floatingTextarea').val().length > 0) {
     let Msg = $('#floatingTextarea').val()
-    let url = 'https://api.whatsapp.com/send?phone=5554374622&text='+ Msg +''
+    let url = 'https://api.whatsapp.com/send?phone=5554374622&text=' + Msg + ''
     window.open(url);
     $('#floatingTextarea').val('')
   }
 })
 
 $('#BtnIWantWA').on('click', () => {
-  if($('#SelectValuePresentation').val() == 'M'){
+  if ($('#SelectValuePresentation').val() == 'M') {
     let Msg = 'Hola, me gustaria adquirir mililitros del perfume *' + $('#TituloPerfume').text() + '*'
-    let url = 'https://api.whatsapp.com/send?phone=5554374622&text='+ Msg +''
+    let url = 'https://api.whatsapp.com/send?phone=5554374622&text=' + Msg + ''
     window.open(url);
-  }else if($('#SelectValuePresentation').val() == 'B'){
+  } else if ($('#SelectValuePresentation').val() == 'B') {
     let Msg = 'Hola, me gustaria adquirir la botella de *' + $('#TituloPerfume').text() + '*'
-    let url = 'https://api.whatsapp.com/send?phone=5554374622&text='+ Msg +''
+    let url = 'https://api.whatsapp.com/send?phone=5554374622&text=' + Msg + ''
     window.open(url);
   }
 })
@@ -260,31 +302,57 @@ $('.dropdown .dropdown-menu li').click(function () {
   $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
 });
 
-const LeerJson = async  (JsonUrl) => {
+const LeerJson = async (JsonUrl) => {
   let result = {};
   await fetch(JsonUrl)
-      .then(res => res.json())
-      .catch(error => {
-          console.log('File not found')
-      })
-      .then(response => {
-          result = response;
-      });
+    .then(res => res.json())
+    .catch(error => {
+      console.log('File not found')
+    })
+    .then(response => {
+      result = response;
+    });
   return result;
 }
 
-const PintarMenuParfums = (menu) =>{
+const PintarMenuParfums = (menu) => {
   let ElToAppend = ''
   let TextToAppend = ''
-  for(let p in menu.menuParfums){
+  for (let p in menu.menuParfums) {
     TextToAppend = ''
-    TextToAppend += '<div class="perfume">'
-    TextToAppend += '<img class="perfume-image" src="'+ menu.menuParfums[p].url +'">'
-    TextToAppend += '<div class="perfume-name">'+ menu.menuParfums[p].name +'</div>'
-    TextToAppend += '<div class="perfume-p" ptv="'+ menu.menuParfums[p].pam +'" seassons="'+ menu.menuParfums[p].seassons +'"></div>'
-    TextToAppend += '<div class="perfume-description" style="display: none;">'+ menu.menuParfums[p].notes +'</div>'
+    TextToAppend += '<div class="perfume divFade">'
+    TextToAppend += '<img class="perfume-image" src="' + menu.menuParfums[p].url + '">'
+    TextToAppend += '<div class="perfume-name">' + menu.menuParfums[p].name + '</div>'
+    TextToAppend += '<div class="perfume-p" ptv="' + menu.menuParfums[p].pam + '" seassons="' + menu.menuParfums[p].seassons + '"></div>'
+    TextToAppend += '<div class="perfume-description" style="display: none;">' + menu.menuParfums[p].notes + '</div>'
     TextToAppend += '</div>'
     ElToAppend += TextToAppend
   }
   $('#perfumes-container').append(ElToAppend)
 }
+
+const resizing = () => {
+  calcularHeaderDimentions()
+}
+
+const calcularHeaderDimentions = () => {
+  let height = window.innerHeight;
+  let heightAbsolute = window.innerHeight*.40;
+  $('.Hheader').css('height', height)
+  $('.contenidoP').css('height', height)
+  $('.absolute').css('height', heightAbsolute)
+}
+
+const closeNavOnWhellMobile = () =>{
+  window.onwheel = closingNavOnMobile;
+}
+
+const closingNavOnMobile = () =>{
+  if($('#navbarNavDropdown').prop('class') == 'navbar-collapse collapse show'){
+    $("[data-bs-target='#navbarNavDropdown']").click()
+  }
+}
+
+//TODO
+//$("[data-bs-target='#navbarNavDropdown']").click() para cerra el navbar del nav cuando este en modo movil
+// $('#navbarNavDropdown').prop('class') cuando tenga x clase saber que se tiene que cerrar y tambien al hacer scroll verificar esta propiedad y cerrar, si esta abierto
