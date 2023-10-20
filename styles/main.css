@@ -146,7 +146,7 @@
 }
 
 .subFooter {
-  background: #0E2954;
+  background: #20413d;
 }
 
 .subFooter p {
@@ -166,7 +166,7 @@ footer {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  background: #3586ff;
+  background: #0d2624;
   padding: 20px 50px;
   align-items: center;
   margin-top: 1%;
@@ -773,7 +773,7 @@ header .contenidoP {
 
 .textos-header {
   width: 40%;
-  color: #6d7993;
+  color: #ade2d5;
 }
 
 .textos-header h1 {
@@ -805,7 +805,7 @@ header .textos-header a {
 }
 
 .absolute {
-  background: #96858f;
+  background: #ade2d5;
   clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
   width: 100%;
   height: 250px;
@@ -977,7 +977,7 @@ button:active {
 
 /*               Boton buscar               */
 .flexbox {
-  background: #96858f;
+  background: #ade2d5;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1014,12 +1014,11 @@ button:active {
 .search>div {
   display: inline-block;
   position: relative;
-  filter: drop-shadow(0 1px #0091c2);
 }
 
 .search>div:after {
   content: "";
-  background: white;
+  background: #3fa796;
   width: 3px;
   height: 16px;
   position: absolute;
@@ -1029,20 +1028,20 @@ button:active {
 }
 
 .search>div>input {
-  color: white;
+  color: #265f58;
   font-size: 16px;
-  background: #ffffff42;
+  background: #ade2d5;
   width: 25px;
   height: 25px;
   padding: 15px;
-  border: solid 2px white;
+  border: solid 2px #3fa796;
   outline: none;
   border-radius: 35px;
   transition: width 0.5s;
 }
 
 .search>div>input::placeholder {
-  color: white;
+  color: #265f58;
   opacity: 0;
   transition: opacity 150ms ease-out;
 }

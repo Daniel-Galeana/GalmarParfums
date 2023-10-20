@@ -176,11 +176,11 @@
 		"notes": "Notas: menta, toronja, bergamota, anís, notas verdes, casis, rosa, hediona, almizcle."
 		},
 		{
-		"url": "assets/Parfums/legendspirit.jpg",
-		"name": "Montblanc - Legend Spirit",
-		"pam": "2700|200",
-		"seassons": "{'Primavera':95,'Verano':100,'Otoño':25,'Invierno':10}",
-		"notes": "Notas: toronja, bergamota, pimienta rosa, acuatico, lavanda, cardamomo, almizcle, amaderado, musgo de roble."
+		"url": "assets/Parfums/ADPAranciaDiCapri.jpg",
+		"name": "Acqua di Parma - Arancia di Capri",
+		"pam": "3850|150",
+		"seassons": "{'Primavera':100,'Verano':100,'Otoño':10,'Invierno':5}",
+		"notes": "Notas: naranja, mandarina de Sicilia, bergamota, limón, petit grain, cardamomo, almizcle, caramelo."
 		},
 		{
 		"url": "assets/Parfums/kenzoiEDTI.jpg",
@@ -281,11 +281,11 @@
 		"notes": "Notas: cedro de Atlas, azafrán, lavanda, canela, cardamomo, ambarado, oud, cipriol, patchulí."
 		},
 		{
-		"url": "assets/Parfums/Onekh.jpg",
-		"name": "Bvlgari - Onekh",
+		"url": "assets/Parfums/Garanat.jpg",
+		"name": "Bvlgari - Garanat",
 		"pam": "8500|100",
-		"seassons": "{'Primavera':30,'Verano':20,'Otoño':90,'Invierno':100}",
-		"notes": "Notas: cuero, oud, especiado, ládano, ahumado."
+		"seassons": "{'Primavera':75,'Verano':20,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: rosa, rosa de Damasco, incienso."
 		},
 		{
 		"url": "assets/Parfums/OudRainTropicalStorm.jpg",
