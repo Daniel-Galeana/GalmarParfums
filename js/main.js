@@ -63,7 +63,7 @@ $(document).ready(async function () {
   //$(".loader-wrapper").fadeOut(CompletedX());
   $(".loader-wrapper").addClass('hide');
   const content = document.querySelector('.content');
-  setTimeout(function() {
+  setTimeout(function () {
     $(".loader-wrapper").remove();
     content.style.display = 'block';
   }, 2500);
@@ -182,10 +182,10 @@ const PintarGrafica = (json) => {
 };
 
 $("#BtnNosotros").click(function () {
-  let ToScroll; 
-  if($('#navbarNavDropdown').prop('class') == 'navbar-collapse collapse show'){
+  let ToScroll;
+  if ($('#navbarNavDropdown').prop('class') == 'navbar-collapse collapse show') {
     ToScroll = $("#quienesSomosSection").offset().top - 160
-  }else{
+  } else {
     ToScroll = $("#quienesSomosSection").offset().top
   }
   $('html, body').animate({
@@ -195,10 +195,10 @@ $("#BtnNosotros").click(function () {
 });
 
 $("#BtnDecants").click(function () {
-  let ToScroll; 
-  if($('#navbarNavDropdown').prop('class') == 'navbar-collapse collapse show'){
+  let ToScroll;
+  if ($('#navbarNavDropdown').prop('class') == 'navbar-collapse collapse show') {
     ToScroll = $("#decantsSection").offset().top - 160
-  }else{
+  } else {
     ToScroll = $("#decantsSection").offset().top
   }
   $('html, body').animate({
@@ -337,18 +337,23 @@ const resizing = () => {
 
 const calcularHeaderDimentions = () => {
   let height = window.innerHeight;
-  let heightAbsolute = window.innerHeight*.40;
-  $('.Hheader').css('height', height)
-  $('.contenidoP').css('height', height)
-  $('.absolute').css('height', heightAbsolute)
+  let heightAbsolute = window.innerHeight * .40;
+
+  if (window.innerWidth < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    //Es movil y no se redimenciona
+  } else {
+    $('.Hheader').css('height', height)
+    $('.contenidoP').css('height', height)
+    $('.absolute').css('height', heightAbsolute)
+  }
 }
 
-const closeNavOnWhellMobile = () =>{
+const closeNavOnWhellMobile = () => {
   window.onwheel = closingNavOnMobile;
 }
 
-const closingNavOnMobile = () =>{
-  if($('#navbarNavDropdown').prop('class') == 'navbar-collapse collapse show'){
+const closingNavOnMobile = () => {
+  if ($('#navbarNavDropdown').prop('class') == 'navbar-collapse collapse show') {
     $("[data-bs-target='#navbarNavDropdown']").click()
   }
 }
