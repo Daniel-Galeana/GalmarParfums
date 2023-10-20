@@ -67,8 +67,7 @@ $(document).ready(async function () {
     $(".loader-wrapper").remove();
     content.style.display = 'block';
   }, 2500);
-
-  calcularHeaderDimentions()
+  calcularHeaderDimentionsInitial()
 })
 
 $('#btnCotizarWA').on('click', () => {
@@ -332,10 +331,10 @@ const PintarMenuParfums = (menu) => {
 }
 
 const resizing = () => {
-  calcularHeaderDimentions()
+  recalcularHeaderDimentions()
 }
 
-const calcularHeaderDimentions = () => {
+const recalcularHeaderDimentions = () => {
   let height = window.innerHeight;
   let heightAbsolute = window.innerHeight * .40;
 
@@ -348,6 +347,14 @@ const calcularHeaderDimentions = () => {
   }
 }
 
+const calcularHeaderDimentionsInitial = () => {
+  let height = window.innerHeight;
+  let heightAbsolute = window.innerHeight * .40;
+  $('.Hheader').css('height', height)
+  $('.contenidoP').css('height', height)
+  $('.absolute').css('height', heightAbsolute)
+}
+
 const closeNavOnWhellMobile = () => {
   window.onwheel = closingNavOnMobile;
 }
@@ -357,7 +364,3 @@ const closingNavOnMobile = () => {
     $("[data-bs-target='#navbarNavDropdown']").click()
   }
 }
-
-//TODO
-//$("[data-bs-target='#navbarNavDropdown']").click() para cerra el navbar del nav cuando este en modo movil
-// $('#navbarNavDropdown').prop('class') cuando tenga x clase saber que se tiene que cerrar y tambien al hacer scroll verificar esta propiedad y cerrar, si esta abierto
