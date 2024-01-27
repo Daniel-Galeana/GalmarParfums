@@ -246,6 +246,13 @@
 		"notes": "Notas: osmanto, cuero."
 		},
 		{
+		"url": "assets/Parfums/indopte.jpg",
+		"name": "Givenchi - Indopté",
+		"pam": "6800|100",
+		"seassons": "{'Primavera':35,'Verano':20,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: cuero, mandarina siciliana, oud."
+		},
+		{
 		"url": "assets/Parfums/oudalborruz.jpg",
 		"name": "Rasasi - Oudh Al Boruzz Asrar Indonesia",
 		"pam": "3000|50",
@@ -267,11 +274,11 @@
 		"notes": "Notas: cardamomo, pimienta rosa, pimienta negra, mandarina, toronja, casis, limón amarillo, enebro, cuero, lavanda, violeta, geranio, coñac, vainilla, sandalo, resinoso, almizclado, vetiver, patchulí, musgo de roble."
 		},
 		{
-		"url": "assets/Parfums/JamaicaMexicana.jpg",
-		"name": "MUPE - Jamaica Mexicana",
-		"pam": "500|100",
-		"seassons": "{'Primavera':100,'Verano':45,'Otoño':100,'Invierno':80}",
-		"notes": "Notas: especiado, jamaica, rosa, ambar, pimienta rosa."
+		"url": "assets/Parfums/mirraNatura.jpg",
+		"name": "Natura - Essencial Mirra",
+		"pam": "1200|100",
+		"seassons": "{'Primavera':15,'Verano':5,'Otoño':100,'Invierno':100}",
+		"notes": "Notas: elemi, pimienta negra, cardamomo, cilantro, bergamota, limon, trigo, ciruela, zanahoria, davana, mirra, tabaco, ambar, vainilla, bálsamo de Tolú, haba tonka, patchulí, bálsamo de Perú, cachemiram, ládano."
 		},
 		{
 		"url": "assets/Parfums/HayatXerjoff.jpg",
@@ -293,6 +300,111 @@
 		"pam": "3250|50",
 		"seassons": "{'Primavera':100,'Verano':90,'Otoño':80,'Invierno':35}",
 		"notes": "Notas: mango, piña, mandarina, ciprés, oud, sandalo, nuez moscada, azafrán, cedro, tabaco."
+		},
+		{
+			"url": "assets/Parfums/LHomme.jpg",
+			"name": "Yves Saint Laurent - L'Homme",
+			"pam": "1500|100",
+			"seassons": "{'Primavera':100,'Verano':90,'Otoño':75,'Invierno':20}",
+			"notes": "Notas: jengibre, bergamota, limón, especias, hojas de violeta, pimienta negra, albahaca, haba tonka, cedro, vetiver de Tahití."
+		},
+		{
+			"url": "assets/Parfums/OudAquilaria.jpg",
+			"name": "Omanluxury - Oud Aquilaria",
+			"pam": "2700|100",
+			"seassons": "{'Primavera':75,'Verano':20,'Otoño':100,'Invierno':100}",
+			"notes": "Notas: manzana, romero, pimienta rosa, rosa de Damasco, rosa de Bulgaria, clavos de olor, salvia, oud, patchulí, ámbar, ládano."
+		},
+		{
+			"url": "assets/Parfums/Flame&Fortune.jpg",
+			"name": "Sarah Baker - Flame & Fortune",
+			"pam": "2370|50",
+			"seassons": "{'Primavera':90,'Verano':40,'Otoño':100,'Invierno':75}",
+			"notes": "Notas: nardo, licor, ahumado, durazno, ládano, flor de azahar, jengibre, petit grain, iris, jazmín, lirios de los valles, pimienta rosa."
+		},
+		{
+			"url": "assets/Parfums/theMoon.jpg",
+			"name": "Frederic Malle - The Moon",
+			"pam": "12100|100",
+			"seassons": "{'Primavera':35,'Verano':20,'Otoño':100,'Invierno':100}",
+			"notes": "Notas: frambuesa, lichi, azafrán, rosa turca, bayas rojas, franquiincienso, grosella roja, violeta, oud, cuero, patchulí, ámbar, sándalo."
+		},
+		{
+			"url": "assets/Parfums/pureOudh.jpg",
+			"name": "The Dua Brand - Pure Oudh",
+			"pam": "900|30",
+			"seassons": "{'Primavera':30,'Verano':15,'Otoño':80,'Invierno':100}",
+			"notes": "Notas: Ambrettolide, Helvetolida, oud."
+		},
+		{
+			"url": "assets/Parfums/oudDeBurgas.jpg",
+			"name": "Santi Burgas - Oud de Burgas",
+			"pam": "6800|100",
+			"seassons": "{'Primavera':55,'Verano':50,'Otoño':80,'Invierno':100}",
+			"notes": "Notas: oud indio, cipriol, bálsamo de Gurjum, clavos de olor, madera de gaiac, raíz de lirio, cedro, sándalo."
+		},
+		{
+			"url": "assets/Parfums/lightOfTheEarth.jpg",
+			"name": "Sasva - Light Of The Earth",
+			"pam": "3500|100",
+			"seassons": "{'Primavera':100,'Verano':75,'Otoño':100,'Invierno':65}",
+			"notes": "Notas: cardamomo, naranja amarga, azafrán, jengibre, patchulí, cedro, ámbar, vetiver, cuero, almizcle."
+		},
+		{
+			"url": "assets/Parfums/awake.jpg",
+			"name": "Akro - Awake",
+			"pam": "2400|100",
+			"seassons": "{'Primavera':35,'Verano':10,'Otoño':100,'Invierno':100}",
+			"notes": "Notas: café, cardamomo, limón italiano, vetiver de Haití."
+		},
+		{
+			"url": "assets/Parfums/R.jpg",
+			"name": "Toskovat - Я",
+			"pam": "3400|30",
+			"seassons": "{'Primavera':100,'Verano':35,'Otoño':100,'Invierno':85}",
+			"notes": "Notas: uvas, champaña, lichi, mango, clavos de olor, atalcado, gardenia, ylang-ylang, heliotropo, iris, nuez moscada, clavel, rosas secas, arena, gamuza, bálsamo de Tolú, vainilla, almizcle, flores."
+		},
+		{
+			"url": "assets/Parfums/oscurod.jpg",
+			"name": "Casaniche - OscUroD Intense",
+			"pam": "2950|30",
+			"seassons": "{'Primavera':45,'Verano':10,'Otoño':100,'Invierno':100}",
+			"notes": "Notas: cipriol, neroli, asfalto, almizcle, bálsamo de Tolú, rosa, cedro, vetiver, almizcle, oud, oud camboyano, patchulí, oud laosiano, amaderado, madera de gaiac, musgo de roble, cuero."
+		},
+		{
+			"url": "assets/Parfums/lignumVitae.jpg",
+			"name": "Beaufort - Lignum Vitae",
+			"pam": "2400|50",
+			"seassons": "{'Primavera':65,'Verano':30,'Otoño':100,'Invierno':75}",
+			"notes": "Notas: bizcocho, cidra, notas marinas, lima, jengibre, caramelo, bergamota, enebro de Virginia, pimienta negra, frutos rojos, mandarina, franquincienso, madera de gaiac, oud, vetiver, salado, vainilla, musgo de roble, arena, ámbar, almizcle."
+		},
+		{
+			"url": "assets/Parfums/m7.jpg",
+			"name": "Yves Saint Laurent - M7",
+			"pam": "1849|80",
+			"seassons": "{'Primavera':20,'Verano':10,'Otoño':85,'Invierno':100}",
+			"notes": "Notas: romero, mandarina, bergamota, oud, vetiver, ámbar, almizcle."
+		},
+		{
+			"url": "assets/Parfums/bravoMonsieur.jpg",
+			"name": "El Ganso - Bravo Monsieur",
+			"pam": "1200|120",
+			"seassons": "{'Primavera':100,'Verano':35,'Otoño':100,'Invierno':80}",
+			"notes": "Notas: violeta, cardamomo, incienso, toronja, papiro de Egipto, iris, lavanda, geranio, sándalo, madera de cachemira, almizcle, vainilla."
+		},
+		{
+			"url": "assets/Parfums/SpiceRoute.jpg",
+			"name": "The perfumist - Spice Route",
+			"pam": "4461|50",
+			"seassons": "{'Primavera':100,'Verano':75,'Otoño':85,'Invierno':30}",
+			"notes": "Notas: bergamota, nuez moscada, pimienta negra, cilantro, lavanda, cedro, madera de cachemira, mantequilla de orris, vetiver, madera china, cuero, ámbar, almizcle, haba tonka, vainilla."
+		},
+		{
+			"url": "assets/Parfums/AncientAlchemy.jpg",
+			"name": "The perfumist - Ancient Alchemy",
+			"pam": "4461|50",
+			"seassons": "{'Primavera':75,'Verano':20,'Otoño':100,'Invierno':100}",
+			"notes": "Notas: almandra, miel, tabaco, fresa, cereza, canela, heliotropo, coco, azúcar morena, madera de guayacán, benzoína, vainilla, bálsamo de Perú, almizcle."
 		}
 ]
 }
