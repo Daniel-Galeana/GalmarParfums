@@ -2,7 +2,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster%20Two:400,700&display=swap);
 /* Lobster Two */
 @import url(https://fonts.googleapis.com/css?family=Abril%20Fatface:400&display=swap);
-/* Abril Fatface */
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../styles/Fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
 
 .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out;
@@ -164,7 +168,7 @@ body {
 
 footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   background: #0d2624;
   padding: 20px 50px;
@@ -614,6 +618,7 @@ footer p {
   padding: 10px;
   text-align: center;
   font-weight: bold;
+  color: #43525b;
 }
 
 .perfume-price {
@@ -784,6 +789,7 @@ header .contenidoP {
 
 .textos-header h2 {
   margin-bottom: 20px;
+  margin-left: 8px;
 }
 
 header img {
@@ -1068,7 +1074,7 @@ button:active {
 
 .btnSendFooter:hover{
   background-color: white;
-  color: #3586ff;
+  color: #0d2624;
   transition: all 0.55s ease;
 }
 
@@ -1287,4 +1293,8 @@ button:active {
     opacity: 1;
     filter: blur(5px);
   }
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none !important;
 }

@@ -54,11 +54,11 @@ $(document).ready(async function () {
       if (distInView < 0) {
         elem.classList.add("inView");
       } else {
-        elem.classList.remove("inView");
+        //elem.classList.remove("inView");
       }
     }
   }
-  fadeIn();
+  //fadeIn();
 
   //$(".loader-wrapper").fadeOut(CompletedX());
   $(".loader-wrapper").addClass('hide');
@@ -68,6 +68,7 @@ $(document).ready(async function () {
     content.style.display = 'block';
   }, 2500);
   calcularHeaderDimentionsInitial()
+  removeClassElement('normal scroll');
 })
 
 $('#btnCotizarWA').on('click', () => {
@@ -107,9 +108,28 @@ perfumesContainer.addEventListener('click', e => {
   };
 });
 
+// const searchInput = document.getElementById('search-input');
+
+// searchInput.addEventListener('input', function () {
+//   const searchQuery = searchInput.value.toLowerCase();
+//   for (let i = 0; i < perfumesContainer.children.length; i++) {
+//     const perfume = perfumesContainer.children[i];
+//     const perfumeName = perfume.querySelector('.perfume-name').textContent.toLowerCase();
+
+//     if (perfumeName.includes(searchQuery)) {
+//       perfume.style.display = 'block';
+//     } else {
+//       perfume.style.display = 'none';
+//     };
+//   };
+// });
+
+// Pruebas De busqueda
 const searchInput = document.getElementById('search-input');
+const datalist = document.getElementById('perfume-list');
 
 searchInput.addEventListener('input', function () {
+  removeClassElement('searching');
   const searchQuery = searchInput.value.toLowerCase();
   for (let i = 0; i < perfumesContainer.children.length; i++) {
     const perfume = perfumesContainer.children[i];
@@ -119,15 +139,36 @@ searchInput.addEventListener('input', function () {
       perfume.style.display = 'block';
     } else {
       perfume.style.display = 'none';
-    };
-  };
+    }
+  }
 });
+
+datalist.addEventListener('click', function (event) {
+  if (event.target.tagName === 'OPTION') {
+    const selectedOption = event.target.value;
+    searchInput.value = selectedOption;
+    // Aquí puedes llamar a tu función de filtrado o hacer lo que necesites
+    const searchQuery = searchInput.value.toLowerCase();
+  for (let i = 0; i < perfumesContainer.children.length; i++) {
+    const perfume = perfumesContainer.children[i];
+    const perfumeName = perfume.querySelector('.perfume-name').textContent.toLowerCase();
+
+    if (perfumeName.includes(searchQuery)) {
+      perfume.style.display = 'block';
+    } else {
+      perfume.style.display = 'none';
+    }
+  }
+  }
+});
+
+// Fin de pruebas de busqueda
 
 const cotizar = (c) => {
   let pArr = c.split('|');
   let _p = parseInt(pArr[0]);
   let _ml = parseInt(pArr[1]);
-  let _ga = parseInt(((Math.pow(6, 3)) - 16));
+  let _ga = parseInt(((Math.pow(6, 3)) + 14));
   let _g = 0.75;
   let pb = parseInt(Math.round((_p + _ga) / _g));
   let p = Math.round(pb / _ml) + 10;
@@ -315,9 +356,10 @@ const LeerJson = async (JsonUrl) => {
 }
 
 const PintarMenuParfums = (menu) => {
+  let nArr = menu.menuParfums.sort(compararPorNombre);
   let ElToAppend = ''
   let TextToAppend = ''
-  for (let p in menu.menuParfums) {
+  for (let p in nArr) {
     TextToAppend = ''
     TextToAppend += '<div class="perfume divFade">'
     TextToAppend += '<img class="perfume-image" src="' + menu.menuParfums[p].url + '">'
@@ -328,6 +370,19 @@ const PintarMenuParfums = (menu) => {
     ElToAppend += TextToAppend
   }
   $('#perfumes-container').append(ElToAppend)
+}
+
+const compararPorNombre = (a, b) => {
+  const nombreA = a.name.toUpperCase();
+  const nombreB = b.name.toUpperCase();
+
+  let comparacion = 0;
+  if (nombreA > nombreB) {
+    comparacion = 1;
+  } else if (nombreA < nombreB) {
+    comparacion = -1;
+  }
+  return comparacion;
 }
 
 const resizing = () => {
@@ -363,4 +418,27 @@ const closingNavOnMobile = () => {
   if ($('#navbarNavDropdown').prop('class') == 'navbar-collapse collapse show') {
     $("[data-bs-target='#navbarNavDropdown']").click()
   }
+}
+
+const removeClassElement = (type) => {
+  var elements = document.querySelectorAll('div.divFade, div.inView');
+  if(type == 'normal scroll')
+  {
+    // Función para remover las clases
+    function removeClasses(event) {
+      // Remueve las clases 'divFade' e 'inView'
+      event.target.classList.remove('divFade', 'inView');
+    }
+    
+    // Agrega un event listener a cada elemento
+    elements.forEach(function(element) {
+      // Escucha por el evento 'transitionend'
+      element.addEventListener('transitionend', removeClasses);
+    });
+  }else{
+    elements.forEach(function(element) {
+      element.classList.remove('divFade', 'inView');
+    });
+  }
+
 }

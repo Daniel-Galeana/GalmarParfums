@@ -74,8 +74,8 @@
       <div id="ContainerQuienesSomos" class="ContainerQuienesSomos"
         style="display: flex;justify-content: space-between;margin-top: 1%;margin-bottom: 2%;padding-left: 21%;padding-right: 21%;">
         <div class="TextoQuienesSomos" style="display: flex;flex-direction: column;">
-          <p class="pOur divFade" style="font-family: lobster two;">Quienes somos</p>
-          <p class="pOurs2 divFade" style="text-align: justify;">Galmar Parfums nace con la idea de poder trasmitir sensaciones y sentimientos a traves de los aromas.Como quieres que te recuerden?" Esta fue la premisa para buscar aromas fuera de lo comun para tener una distincion a las demas personas.Un perfume unico para una persona unica. A traves de la coleccion queremos compartir estos aromas que te hagan sentir feliz, vigorizante y especial para esas salidas donde querramos destacar. Dar a conocer a la gente que hay un mundo de aromas ahi afuera esperando ser descubierto.</p>      
+          <p class="pOur divFade" style="font-weight: 600;color: #333;">Quienes somos</p>
+          <p class="pOurs2 divFade" style="text-align: justify;color: #43525b;">Galmar Parfums nace con la idea de poder trasmitir sensaciones y sentimientos a traves de los aromas.Como quieres que te recuerden?" Esta fue la premisa para buscar aromas fuera de lo comun para tener una distincion a las demas personas.Un perfume unico para una persona unica. A traves de la coleccion queremos compartir estos aromas que te hagan sentir feliz, vigorizante y especial para esas salidas donde querramos destacar. Dar a conocer a la gente que hay un mundo de aromas ahi afuera esperando ser descubierto.</p>      
         </div>
         <img src="assets/logoHeader.png" alt="our_image" class="imgOur divFade">
       </div>
@@ -86,10 +86,23 @@
     </section>
     <a id="demo02" class="d-none" href="#modal-02">DEMO02</a>
     <div id="ContainerParfumsAndSearch" style="margin-bottom: 1%;position: relative;overflow: inherit;">
-      <div class="flexbox">
+      <!-- <div class="flexbox">
         <div class="search">
           <div>
             <input autocomplete="off" id="search-input" type="text" placeholder="Buscar por nombre..." required>
+          </div>
+        </div>
+      </div> -->
+      <div class="flexbox">
+        <div class="search">
+          <div>
+            <input autocomplete="off" id="search-input" type="text" placeholder="Buscar por nombre..." required list="perfume-list">
+            <datalist id="perfume-list">
+              <option value="Nishane">
+              <option value="Tom Ford">
+              <option value="Masculino">
+              <!-- Agrega más opciones según tu lista -->
+            </datalist>
           </div>
         </div>
       </div>
@@ -147,9 +160,6 @@
       </div>
     </div>
     <footer id="Footer">
-      <div>
-        <img src="assets/MinLogo.svg" height="200" />
-      </div>
       <div>
         <p class="pMainContact">Contacto</p>
         <div>

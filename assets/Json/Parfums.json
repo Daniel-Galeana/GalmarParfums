@@ -365,6 +365,13 @@
 			"notes": "Notas: uvas, champaña, lichi, mango, clavos de olor, atalcado, gardenia, ylang-ylang, heliotropo, iris, nuez moscada, clavel, rosas secas, arena, gamuza, bálsamo de Tolú, vainilla, almizcle, flores."
 		},
 		{
+			"url": "assets/Parfums/generationGodart.jpg",
+			"name": "Toskovat - Génération Godard",
+			"pam": "3400|30",
+			"seassons": "{'Primavera':50,'Verano':10,'Otoño':100,'Invierno':85}",
+			"notes": "Notas: caramelo, rosa, palomitas de maíz, refresco de cola, papel, tabaco, almizcle, ládano."
+		},
+		{
 			"url": "assets/Parfums/oscurod.jpg",
 			"name": "Casaniche - OscUroD Intense",
 			"pam": "2950|30",
@@ -405,6 +412,34 @@
 			"pam": "4461|50",
 			"seassons": "{'Primavera':75,'Verano':20,'Otoño':100,'Invierno':100}",
 			"notes": "Notas: almandra, miel, tabaco, fresa, cereza, canela, heliotropo, coco, azúcar morena, madera de guayacán, benzoína, vainilla, bálsamo de Perú, almizcle."
+		},
+		{
+			"url": "assets/Parfums/SyntheticJungle.jpg",
+			"name": "Frederic Malle - Synthetic Jungle",
+			"pam": "4850|100",
+			"seassons": "{'Primavera':100,'Verano':85,'Otoño':45,'Invierno':20}",
+			"notes": "Notas: gálbano, albahaca, grosellas negras, lirio, jacinto, jazmín, ylang-ylang, almendra, musgo de roble, patchulí."
+		},
+		{
+			"url": "assets/Parfums/Vanagloria.jpg",
+			"name": "Laboratorio Olfattivo - Vanagloria",
+			"pam": "4250|100",
+			"seassons": "{'Primavera':30,'Verano':15,'Otoño':100,'Invierno':100}",
+			"notes": "Notas: azafrán, piña, incienso, haba tonka, franquincienso, vainilla, almizcle."
+		},
+		{
+			"url": "assets/Parfums/roeya.jpg",
+			"name": "The Spirit of Dubai - Roeya",
+			"pam": "3900|50",
+			"seassons": "{'Primavera':100,'Verano':100,'Otoño':85,'Invierno':70}",
+			"notes": "Notas: cachemira, nerolí, nardos, mandarina, jazmín, flor de naranjo, azafrán, papiro de Egipto, oud, almizcle, ámbar gris, abeto."
+		},
+		{
+			"url": "assets/Parfums/oudMaracuja.jpg",
+			"name": "Maison Crivelli - Oud Maracujá",
+			"pam": "3900|50",
+			"seassons": "{'Primavera':80,'Verano':25,'Otoño':100,'Invierno':100}",
+			"notes": "Notas: maracuyá, afrutado, rosa Turca, azafrán, oud, patchulí de Indonesia, benjuí, cuero, Akigalawood, ambarado, ládano, vainilla."
 		}
 ]
 }
